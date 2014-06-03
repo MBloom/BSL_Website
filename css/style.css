@@ -30,14 +30,6 @@ p {
     line-height: 1.5;
 }
 
-@media(min-width:767px) {
-    p {
-        margin: 0 0 50px;
-        font-size: 24px;
-        line-height: 1.6;
-    }
-}
-
 a {
     color: #fff;
     -webkit-transition: all .2s ease-in-out;
@@ -145,6 +137,12 @@ a:focus {
 
 
 @media(min-width:767px) {
+    p {
+        margin: 0 0 50px;
+        font-size: 24px;
+        line-height: 1.6;
+    }
+
     .navbar {
         padding-top: 150px;
         border-bottom: 0;
@@ -177,7 +175,7 @@ a:focus {
 
     .top-nav-collapse .bsl-words {
         opacity: 0;
-        width: 350px;
+        width: 300px;
         -webkit-transition: opacity .5s ease-in-out;
         -moz-transition: opacity .5s ease-in-out;
         transition: opacity .5s ease-in-out;
@@ -186,6 +184,34 @@ a:focus {
     .top-nav-collapse {
         padding: 0;
         background-color: #074575;
+    }
+
+    .intro {
+        height: 100%;
+        padding: 0;
+    }
+
+    .brand-heading {
+        font-size: 48px;
+        line-height: 1.5;
+        float: left;
+    }
+
+    .intro-text {
+        font-size: 25px;
+    }
+    
+    .content-section {
+        padding-top: 70px;
+    }
+
+    .download-section {
+        padding: 100px 0;
+    }
+
+    #map {
+        height: 400px;
+        margin-top: 250px;
     }
 }
 
@@ -230,7 +256,7 @@ video#bgvid {
     color: #074575;
 }
 
-.pull-left{
+.text-left{
     text-align: left;
 }
 
@@ -256,6 +282,22 @@ video#bgvid {
     background-attachment: fixed;
     background-size: 100%;
     width: 100%;
+}
+
+#difference-intro{
+    height: 800px;
+    color: #074575;
+    background: url(../img/whiteboard.jpg) no-repeat center;
+    background-size: 100%;
+}
+
+#difference-intro-container{
+    margin-top: 60px;
+}
+
+#drod{
+    background: url(../img/drod.jpg) no-repeat;
+    
 }
 
 #laid-back-text{
@@ -287,23 +329,6 @@ video#bgvid {
 
 .column-3 img {
     height: 30%;
-}
-
-@media(min-width:767px) {
-    .intro {
-        height: 100%;
-        padding: 0;
-    }
-
-    .brand-heading {
-        font-size: 48px;
-        line-height: 1.5;
-        float: left;
-    }
-
-    .intro-text {
-        font-size: 25px;
-    }
 }
 
 .btn-circle {
@@ -380,8 +405,11 @@ video#bgvid {
     }
 }
 
-.content-section {
+.top-space{
     top: 800px;
+}
+
+.content-section {
     height: 760px;
     width: 100%;
     text-align: center;
@@ -402,8 +430,32 @@ video#bgvid {
     -o-background-size: cover;
 }
 
+.spacer-img{
+    height: 70%;
+    width: 100%;
+    position: relative;
+}
+
+.blurb {
+    height: auto;
+    width: 100%;
+    background: #fff;
+    color: #074575;
+    text-align: right;
+    position: relative;
+    padding: 100px 0;
+}
+
+.blurb p{
+    font-size: 20px;
+    margin: 0; 
+}
+
+.blurb h1{
+    font-size: 48px;
+}
+
 #footer {
-    top: 800px;
     height: 70px;
     width: 100%;
     text-align: center;
@@ -415,21 +467,6 @@ video#bgvid {
     width: 100%;
     height: 200px;
     margin-top: 100px;
-}
-
-@media(min-width:767px) {
-    .content-section {
-        padding-top: 70px;
-    }
-
-    .download-section {
-        padding: 100px 0;
-    }
-
-    #map {
-        height: 400px;
-        margin-top: 250px;
-    }
 }
 
 .btn {

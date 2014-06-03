@@ -1,16 +1,18 @@
 // collapse the navbar on scroll
 $(window).scroll(function() {
-    if ($(".navbar").offset().top > 520) {
-        $(".navbar-fixed-top").addClass("top-nav-collapse");
-    } else {
-        $(".navbar-fixed-top").removeClass("top-nav-collapse");
+    if ($('body').is('.HomePage')){
+        if ($(".navbar").offset().top > 520) {
+            $(".navbar-fixed-top").addClass("top-nav-collapse");
+        } else {
+            $(".navbar-fixed-top").removeClass("top-nav-collapse");
+        }
     }
 });
 
 (function($){
     // Parallax
     $('.bkg').each(function() {
-        $(this).parallax('50%', 0.25, true);
+        $(this).parallax('50%', 0.5, true);
     });
 })(jQuery);
 
