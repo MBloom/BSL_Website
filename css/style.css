@@ -32,14 +32,14 @@ p {
 
 @media(min-width:767px) {
     p {
-        margin: 0 0 35px;
-        font-size: 20px;
+        margin: 0 0 50px;
+        font-size: 24px;
         line-height: 1.6;
     }
 }
 
 a {
-    color: #28c3ab;
+    color: #fff;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
@@ -65,10 +65,9 @@ a:focus {
     positon: fixed;
     margin-bottom: 0;
     border-bottom: 1px solid rgba(255,255,255,.3);
-    text-transform: uppercase;
     font-family: "Roboto";
     font-weight: 100;
-    background-color: #000;
+    background-color: #074575;
 }
 
 .navbar-brand {
@@ -88,15 +87,8 @@ a:focus {
     color: #fff;
 }
 
-.top-nav-collapse a {
-    color: #000;
-}
-
-.top-nav-collapse img {
-    max-width: 100px !important;
-}
-
 .navbar-custom .nav li a {
+    font-weight: normal;
     -webkit-transition: background .3s ease-in-out;
     -moz-transition: background .3s ease-in-out;
     transition: background .3s ease-in-out;
@@ -120,20 +112,80 @@ a:focus {
     outline: 0;
 }
 
+.footer-list{
+    list-style: none;
+    display: block;
+    margin: 25px 0;
+}
+
+.footer-list li{
+    font-size: 12px;
+    font-weight: normal;
+    display: inline-block;
+    margin-right: 150px;
+}
+
+.footer-list li:last-child{
+    margin: 0;
+}
+
+.footer-list a{
+    color: #fff;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+.footer-list a:hover,
+a:focus {
+    text-decoration: none;
+    color: #176e61;
+}
+
+
+
 @media(min-width:767px) {
     .navbar {
-        padding-top: 200px;
+        padding-top: 150px;
         border-bottom: 0;
         letter-spacing: 1px;
         background: 0 0;
-        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
-        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -webkit-transition: background .25s ease-in-out ,25s,padding .5s ease-in-out;
+        -moz-transition: background .25s ease-in-out .25s,padding .5s ease-in-out;
         transition: background .5s ease-in-out,padding .5s ease-in-out;
+    }
+
+    .stone {
+        content: url("../img/stone_white.png");
+        width: 150px;
+    }
+
+    .bsl-words{
+        content: url("../img/bsl_white.png");
+        display: inherit;
+        width: 450px;
+        padding-left: 20px;
+    }
+
+    .top-nav-collapse .stone {
+        width: 40px;
+        margin: 20px 0px -10px;
+        -webkit-transition: width .5s ease-in-out;
+        -moz-transition: width .5s ease-in-out;
+        transition: width .5s ease-in-out;
+    }
+
+    .top-nav-collapse .bsl-words {
+        opacity: 0;
+        width: 350px;
+        -webkit-transition: opacity .5s ease-in-out;
+        -moz-transition: opacity .5s ease-in-out;
+        transition: opacity .5s ease-in-out;
     }
 
     .top-nav-collapse {
         padding: 0;
-        background-color: #fff;
+        background-color: #074575;
     }
 }
 
@@ -169,13 +221,17 @@ video#bgvid {
 }
 
 #intro-container{
-    margin-top: 300px
+    margin-top: 350px
 }
 
 .section-title{
     text-align: center;
     font-size: 48px;
-    color: rgb(7,69,117);
+    color: #074575;
+}
+
+.pull-left{
+    text-align: left;
 }
 
 .section-contents{
@@ -184,21 +240,35 @@ video#bgvid {
 
 #what-we-do{
     background: url(../img/tank.jpg) no-repeat center;
+    background-attachment: fixed;
     background-size: 100%;
 }
 
 #how-we-do-it{
     /*background: url(../img/graph_paper.jpg) center;*/
     background: #fff;
-    color: rgb(7,69,117);
+    color: #074575;
 }
 
 #who-is-bsl{
-    background: #777 url(../img/happy_dan.jpg) no-repeat top right;
+    height: 720px;
+    background: #777 url(../img/happy_dan.jpg) no-repeat center;
+    background-attachment: fixed;
+    background-size: 100%;
+    width: 100%;
+}
+
+#laid-back-text{
+    margin-bottom: 10px;
+    width: 80%;
+}
+
+#laid-back-subtext a{
+    color: #fff;
 }
 
 .brand-heading {
-    font-size: 40px;
+    font-size: 36px;
     line-height: 1.5;
     float: left;
 }
@@ -226,7 +296,7 @@ video#bgvid {
     }
 
     .brand-heading {
-        font-size: 56px;
+        font-size: 48px;
         line-height: 1.5;
         float: left;
     }
@@ -312,7 +382,7 @@ video#bgvid {
 
 .content-section {
     top: 800px;
-    height: 700px;
+    height: 760px;
     width: 100%;
     text-align: center;
     position: relative;
@@ -332,6 +402,15 @@ video#bgvid {
     -o-background-size: cover;
 }
 
+#footer {
+    top: 800px;
+    height: 70px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    background: #074575;
+}
+
 #map {
     width: 100%;
     height: 200px;
@@ -340,7 +419,7 @@ video#bgvid {
 
 @media(min-width:767px) {
     .content-section {
-        padding-top: 100px;
+        padding-top: 70px;
     }
 
     .download-section {
