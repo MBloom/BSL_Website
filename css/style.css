@@ -3,8 +3,8 @@ body {
     height: 100%;
     font-family: "Roboto";
     font-weight: 100;
-    color: #fff;
-    background-color: #000;
+    color: #074575;
+    background-color: #fff;
 }
 
 html {
@@ -246,7 +246,7 @@ video#bgvid {
     vertical-align: middle;
 }
 
-#intro-container{
+#home-intro-container{
     margin-top: 350px
 }
 
@@ -258,6 +258,10 @@ video#bgvid {
 
 .text-left{
     text-align: left;
+}
+
+.text-white{
+    color: #fff;
 }
 
 .section-contents{
@@ -291,7 +295,7 @@ video#bgvid {
     background-size: 100%;
 }
 
-#difference-intro-container{
+#intro-container{
     margin-top: 60px;
 }
 
@@ -303,10 +307,18 @@ video#bgvid {
 #laid-back-text{
     margin-bottom: 10px;
     width: 80%;
+    color: #fff;
 }
 
-#laid-back-subtext a{
-    color: #fff;
+#careers-container{
+    height: 100%;
+    background: url(../img/office1_opac.jpg) 50% 20%;
+    background-attachment: fixed;
+}
+
+#grads-section .blurb,
+#pros-section .blurb {
+    background: rgba(184,214,236,0.8);
 }
 
 .brand-heading {
@@ -414,7 +426,7 @@ video#bgvid {
     width: 100%;
     text-align: center;
     position: relative;
-    background: #000;
+    background: #fff;
     padding-top: 100px;
 }
 
@@ -436,6 +448,16 @@ video#bgvid {
     position: relative;
 }
 
+.text-banner {
+    height: auto;
+    width: 100%;
+    background: rgb(115,172,217);
+    color: #fff;
+    text-align: center;background: rgb(115,172,217);
+    position: relative;
+    padding: 50px 0 20px;
+}
+
 .blurb {
     height: auto;
     width: 100%;
@@ -446,13 +468,49 @@ video#bgvid {
     padding: 100px 0;
 }
 
-.blurb p{
+div .blurb {
+    position: inherit;
+}
+
+.blurb p {
     font-size: 20px;
     margin: 0; 
 }
 
-.blurb h1{
+.blurb h1 {
     font-size: 48px;
+}
+
+.blurb img {
+    width: 100%;
+    margin: 0 60px;
+}
+
+.blurb img {
+    width: 100%;
+    margin: 0 60px;
+}
+
+.careers-selection {
+    width: 100%;
+    max-width: 1100px;
+    position: absolute;
+    bottom: 0;
+}
+
+.careers-selection div {
+    width: 50%;
+    float: left;
+}
+
+.careers-selection div img {
+    opacity: 0.5;
+    width:400px;
+    height:250px;
+}
+
+.careers-selection div img:hover {
+    opacity: 1;
 }
 
 #footer {

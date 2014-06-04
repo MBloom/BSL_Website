@@ -9,6 +9,44 @@ $(window).scroll(function() {
     }
 });
 
+/* 
+Document vs. Window
+$( document ) is only available after the document has loaded
+$( window ) is available before the document loads/is ready
+*/
+
+$(document).ready( function(){
+    $( "#grads" ).click(function() {
+        // simply switch content if other section is currrently active 
+        if ($("#pros-section").is(':visible')) {
+            $( ".pros-toggle" ).toggle();
+            $( ".grads-toggle" ).toggle();
+        }
+        // toggle section
+        else
+            $( ".grads-toggle" ).toggle( "blind" );
+        //move to top of the section
+        if ($("#grads-section").is(':visible')) {
+            $("html, body").animate({scrollTop: $("#grads-section").offset().top});
+        }
+    });
+
+    // professional image is clicked
+    $( "#pros" ).click(function() {
+        // simply switch content if other section is currrently active 
+        if ($("#grads-section").is(':visible')) {
+            $( ".grads-toggle" ).toggle();
+            $( ".pros-toggle" ).toggle();
+        }
+        // toggle section
+        else
+            $( ".pros-toggle" ).toggle( "blind" );
+        //move to top of the section
+        if ($("#pros-section").is(':visible')) {
+            $("html, body").animate({scrollTop: $("#pros-section").offset().top});
+        }
+    });
+});
 (function($){
     // Parallax
     $('.bkg').each(function() {
