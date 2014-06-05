@@ -46,8 +46,17 @@ $(document).ready(function() {
         }
     });
 });
+// Slideshow functionality
+$(function(){
+    $('.slideshow img:gt(0)').hide();
+    setInterval(function(){
+      $('.slideshow :first-child').fadeOut()
+         .next('img').fadeIn()
+         .end().appendTo('.slideshow');}, 
+      5000);
+});
+// Parallax effect for background images
 (function($) {
-    // Parallax
     $('.bkg').each(function() {
         $(this).parallax('50%', 0.5, true);
     });

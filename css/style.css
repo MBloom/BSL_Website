@@ -445,6 +445,9 @@ div .blurb {
 .careers-selection div img:hover {
     opacity: 1;
 }
+.cycle-slideshow img{
+    width: 100%;
+}
 #footer {
     height: 70px;
     width: 100%;
