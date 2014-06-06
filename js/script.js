@@ -47,13 +47,11 @@ $(document).ready(function() {
     });
 });
 // Slideshow functionality
-$(function(){
+$(function() {
     $('.slideshow img:gt(0)').hide();
-    setInterval(function(){
-      $('.slideshow :first-child').fadeOut()
-         .next('img').fadeIn()
-         .end().appendTo('.slideshow');}, 
-      5000);
+    setInterval(function() {
+        $('.slideshow :first-child').fadeOut().next('img').fadeIn().end().appendTo('.slideshow');
+    }, 5000);
 });
 // Parallax effect for background images
 (function($) {
@@ -61,6 +59,18 @@ $(function(){
         $(this).parallax('50%', 0.5, true);
     });
 })(jQuery);
+// Bio selection for careers page
+$(window).ready(function() {
+    $(".headshot").click(function(event) {
+        var $people = $('.headshot'); 
+        var $descriptions = $('.description');
+        var id = $(this).attr('name');
+        var $cur_desc = $("#desc_" + id).toggle();
+        $(this).toggleClass("active-bio");
+        $people.not(this).removeClass("active-bio");
+        $descriptions.not($cur_desc).hide();
+    });
+});
 // Google Map Skin - Get more at http://snazzymaps.com/
 function init() {
     var myLoc = new google.maps.LatLng(38.9394730, -77.1787780)
