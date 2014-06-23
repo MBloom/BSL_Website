@@ -1,13 +1,13 @@
 // collapse the navbar on scroll
 $(function() {
-    $("#content").waypoint(function() {
+    if(document.body.id != 'index'){
+        $("#nav").addClass("stuck");
+    }
+    else $("#content").waypoint(function() {
         $("#nav").toggleClass("stuck")
     }, {
         offset: 160
     });
-    if(!$('body').hasClass('index')){
-        $("#nav").addClass("stuck");
-    }
 });
 /*
 Document vs. Window
@@ -56,7 +56,7 @@ $(function() {
 });
 // Parallax effect for background images
 $(function() {
-    $('.bkg').each(function() {
+    $('.parallax-me').each(function() {
         $(this).parallax('50%', 0.3, true);
     });
 });

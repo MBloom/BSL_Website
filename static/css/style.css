@@ -170,7 +170,7 @@ a:hover, a:focus {
     -o-animation: intro 3s forwards;
     animation: intro 3s forwards
 }
-#index header#nav {
+header#nav {
     position: fixed;
     top: 0;
     width: 100%;
@@ -181,7 +181,7 @@ a:hover, a:focus {
     -o-transition: background .2s linear;
     transition: background .2s linear
 }
-#index header#nav nav#navigation {
+header#nav nav#navigation {
     padding: 90px 0 0 0;
     margin-bottom: 0;
     overflow: hidden;
@@ -197,12 +197,12 @@ a:hover, a:focus {
     transition: padding .2s linear
 }
 @media (max-width: 1149px) {
-    #index header#nav nav#navigation {
+    header#nav nav#navigation {
         padding-left: 25px;
         padding-right: 25px
    }
 }
-#index header#nav nav#navigation #logo {
+header#nav nav#navigation #logo {
     float: left;
     width: 300px;
     height: 75px;
@@ -212,35 +212,35 @@ a:hover, a:focus {
     -o-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out
 }
-#index header#nav nav#navigation #logo:hover {
+header#nav nav#navigation #logo:hover {
     -webkit-opacity: 0.7;
     -moz-opacity: 0.7;
     opacity: 0.7
 }
-#index header#nav nav#navigation #logo img {
+header#nav nav#navigation #logo img {
     width: 100%;
     height: 100%
 }
 @media (max-width: 767px) {
-    #index header#nav nav#navigation #logo {
+    header#nav nav#navigation #logo {
         display: none
    }
 }
-#index header#nav nav#navigation ul {
+header#nav nav#navigation ul {
     list-style: none;
     margin: 35px 0 0 0;
     padding: 0;
     float: right;
     overflow: hidden
 }
-#index header#nav nav#navigation ul li {
+header#nav nav#navigation ul li {
     display: inline-block;
     padding-left: 70px;
     font-size: 14px;
     line-height: 1.5;
     font-weight: bold
 }
-#index header#nav nav#navigation ul a {
+header#nav nav#navigation ul a {
     display: block;
     color: #fff;
     padding-bottom: 12px;
@@ -251,9 +251,9 @@ a:hover, a:focus {
     -o-transition: all .1s linear;
     transition: all .1s linear
 }
-#index header#nav nav#navigation ul a:hover, 
-#index header#nav nav#navigation ul a:active, 
-#index header#nav nav#navigation ul a:focus {
+header#nav nav#navigation ul a:hover, 
+header#nav nav#navigation ul a:active, 
+header#nav nav#navigation ul a:focus {
     text-decoration: line-through;
     opacity: 0.7;
     -webkit-transition: all .1s linear;
@@ -262,16 +262,16 @@ a:hover, a:focus {
     transition: all .1s linear
 }
 @media (max-width: 1149px) {
-    #index header#nav nav#navigation ul li {
+    header#nav nav#navigation ul li {
         padding-left: 40px
    }
 }
 @media (max-width: 767px) {
-    #index header#nav nav#navigation ul {
+    header#nav nav#navigation ul {
         display: none
    }
 }
-#index header#nav.stuck {
+header#nav.stuck {
     background: #074575;
     opacity: 0.8;
     -webkit-transition: background .2s linear;
@@ -279,14 +279,14 @@ a:hover, a:focus {
     -o-transition: background .2s linear;
     transition: background .2s linear
 }
-#index header#nav.stuck nav#navigation {
+header#nav.stuck nav#navigation {
     padding: 13px 0;
     -webkit-transition: padding .2s linear;
     -moz-transition: padding .2s linear;
     -o-transition: padding .2s linear;
     transition: padding .2s linear
 }
-#index header#nav.stuck nav#navigation #logo {
+header#nav.stuck nav#navigation #logo {
     height: 45px;
     width: 180px;
     -webkit-transition: all .2s ease-in-out;
@@ -294,34 +294,34 @@ a:hover, a:focus {
     -o-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out
 }
-#index header#nav.stuck nav#navigation ul {
+header#nav.stuck nav#navigation ul {
     margin-top: 15px
 }
 @media (max-width: 1149px) {
-    #index header#nav.stuck nav#navigation {
-        padding: 25px
+    header#nav.stuck nav#navigation {
+        padding: 13px
    }
-   #index header#nav.stuck nav#navigation ul li {
+   header#nav.stuck nav#navigation ul li {
        padding-left: 40px
   }
 }
 @media (max-width: 767px) {
-    #index header#nav.stuck nav#navigation {
+    header#nav.stuck nav#navigation {
         padding: 13px 0
    }
-   #index header#nav.stuck nav#navigation #logo {
+   header#nav.stuck nav#navigation #logo {
        display: block;
        margin-left: 13px
   }
-  #index header#nav.stuck nav#navigation ul {
+  header#nav.stuck nav#navigation ul {
       display: block;
       padding-top: 0
  }
- #index header#nav.stuck nav#navigation ul li {
+ header#nav.stuck nav#navigation ul li {
      padding-left: 10px
 }
 }
-#index header#header {
+header#header {
     background: transparent;
     height: 820px;
     position: fixed;
@@ -330,7 +330,7 @@ a:hover, a:focus {
     overflow: hidden;
     z-index: 28
 }
-#index header#header h1#brand {
+header#header h1#brand {
     font-size: 48px;
     line-height: 1.5;
     font-weight: 300;
@@ -342,15 +342,15 @@ a:hover, a:focus {
     margin-top: 335px
 }
 @media (max-width: 1149px) {
-    #index header#header h1#brand{
+    header#header h1#brand{
         margin-left: 25px
    }
 }
 @media (max-width: 767px) {
-    #index header#header {
+    header#header {
         background-position: center center
    }
-   #index header#header h1#brand {
+   header#header h1#brand {
        margin-top: 100px;
        font-size: 28px
   }
@@ -729,12 +729,107 @@ footer#footer #start .icon-mail {
       display: inherit !important
  }
 }
-.content-section {
-    padding-top: 70px;
+#difference #content {
+    top: 76px
 }
-.download-section {
+#difference section#what {
+    height: 800px;
+    color: #074575;
+    background: url(../img/whiteboard.jpg) no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding: 90px 0
+}
+#difference section#what h2 {
+    font-size: 48px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 60px
+}
+#difference section#what p {
+    font-size: 26px;
+    font-weight: 00;
+    text-align: center;
+    margin-bottom: 60px
+}
+@media (max-width: 1149px) {
+    #difference section#what {
+        padding: 180px 0;
+   }
+   #difference section#what h2 {
+       font-size: 38px;
+       margin-bottom: 40px;
+  }
+  #difference section#what p {
+       font-size: 22px;
+       margin-bottom: 0
+  }
+}
+@media (max-width: 767px) {
+    #difference section#what {
+        padding: 45px 0;
+        background-image: none;
+        background-color: #074575;
+        height: auto
+   }
+   #difference section#what h2 {
+        color: #fff;
+       font-size: 36px;
+       margin-bottom: 40px;
+  }
+  #difference section#what p {
+        color: #fff;
+       font-size: 20px;
+       margin-bottom: 0
+  }
+}
+#difference section#img-1 {
+    background: url(../img/drod.jpg) no-repeat center;
+    height: 70%;
+    width: 100%;
+    position: relative;
+    background-attachment: fixed; 
+    background-size: cover;
+}
+#difference section#img-2 {
+    background: url(../img/block.jpg) no-repeat center;
+    height: 70%;
+    width: 100%;
+    position: relative;
+    background-attachment: fixed; 
+    background-size: cover;
+}
+#difference section#img-3 {
+    background: url(../img/drod.jpg) no-repeat center;
+    height: 70%;
+    width: 100%;
+    position: relative;
+    background-attachment: fixed; 
+    background-size: cover;
+}
+#difference section.blurb {
+    height: auto;
+    width: 100%;
+    text-align: right;
+    position: relative;
     padding: 100px 0;
 }
+#difference section.blurb p {
+    font-size: 20px;
+    margin: 0;
+}
+#difference section.blurb h2 {
+    font-size: 48px;
+    font-weight: 300
+}
+#difference section.blurb img {
+    width: 100%;
+    margin: 60px 20px; 
+    /* find a way to horizontally align this */
+}
+
 #map {
     width: 100%;
     height: 70vh;
@@ -742,7 +837,7 @@ footer#footer #start .icon-mail {
     position: relative;
 }
 }
-video#bgvid {
+/*video#bgvid {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -754,7 +849,7 @@ video#bgvid {
     transform: translateX(-50%) translateY(-50%);
     background: url(../video/preview.png) no-repeat;
     background-size: cover;
-}
+}*/
 .intro {
     display: table;
     width: 100%;
@@ -845,7 +940,8 @@ video#bgvid {
 #the-team h1 {
     margin-bottom: 100px;
 }
-#the-team h2, h3 {
+#the-team h2, 
+#the-team h3 {
     margin: 10px 0 0;
 }
 #the-team p {
@@ -969,11 +1065,6 @@ video#bgvid {
     position: relative;
     background: #fff;
     padding-top: 100px;
-}
-.spacer-img {
-    height: 70%;
-    width: 100%;
-    position: relative;
 }
 .text-banner {
     height: auto;

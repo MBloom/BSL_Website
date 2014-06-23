@@ -28,7 +28,7 @@
         <link rel="stylesheet" href={{ url_for('static', filename='css/bootstrap.min.css') }} type="text/css">
         <link rel="stylesheet" href={{ url_for('static', filename='css/style.css') }}>
     </head>
-    <body id="index">
+    <body id="difference">
         <!-- navbar -->
         <header id="nav">
             <div class="row">
@@ -46,68 +46,70 @@
                 </nav>
             </div>
         </header>
-        <section id="difference-intro" class="content-section">
-            <div class="row">
-                <div id="intro-container" class="col-lg-10 col-lg-offset-1">
-                    <h1 class="section-title">What we do</h1>
-                    <p class="section-contents">Today, our customers are challenged to provide more services, better reliability, and flexible capability—within lower budgets. In the past, IT decision-makers decreased costs by cutting services, shelving projects, and espousing system maintenance. This approach sacrifices quality and is counterproductive to the objective of long-term cost savings. The resulting outdated systems hinder the ability to deploy needed applications and services; pose cyber security risks; and strain resources, people, and processes.</p>
-                    <p>Conversely, our approach tackles these modernization challenges by integrating and replacing legacy systems with compatible new technologies to reduce overall costs.</p>
+        <div id="content">
+            <section id="what">
+                <div class="row">
+                    <div class="large-10 large-offset-1 columns">
+                        <h2 class="section-title">What we do</h2>
+                        <p class="section-contents">Today, our customers are challenged to provide more services, better reliability, and flexible capability—within lower budgets. In the past, IT decision-makers decreased costs by cutting services, shelving projects, and espousing system maintenance. This approach sacrifices quality and is counterproductive to the objective of long-term cost savings. The resulting outdated systems hinder the ability to deploy needed applications and services; pose cyber security risks; and strain resources, people, and processes.</p>
+                        <p>Conversely, our approach tackles these modernization challenges by integrating and replacing legacy systems with compatible new technologies to reduce overall costs.</p>
+                    </div>
                 </div>
-            </div>
-        </section>
-        <section style="background: url(../static/img/drod.jpg) no-repeat center; background-attachment: fixed; background-size: 100%;" class="spacer-img bkg">
-        </section>
-        <section class="blurb">
-            <div class="row">
-                <div class="col-lg-9 text-left">
-                    <h1>SAMcloud</h1>
-                    <h3>A workbench that empowers clients</h3>
-                    <p>Our team has designed and implemented a modern systems engineering workbench that allows our customers to view project development in real time. We do all of our work directly in SAMcloud, and our clients receive personal accounts for viewing and commenting. This makes our project development process highly collaborative and 100% transparent.</p>
+            </section>
+            <section id="img-1" class="parallax-me">
+            </section>
+            <section class="blurb">
+                <div class="row">
+                    <div class="large-9 columns">
+                        <h2>SAMcloud</h2>
+                        <h3>A workbench that empowers clients</h3>
+                        <p>Our team has designed and implemented a modern systems engineering workbench that allows our customers to view project development in real time. We do all of our work directly in SAMcloud, and our clients receive personal accounts for viewing and commenting. This makes our project development process highly collaborative and 100% transparent.</p>
+                    </div>
+                    <div class="large-3 columns hide-for-small">
+                        <img src={{ url_for('static', filename='img/samcloud_icon.png') }}>
+                    </div>
                 </div>
-                <div class="col-lg-3">
-                    <img src={{ url_for('static', filename='img/samcloud_icon.png') }}>
+            </section>
+            <section id="img-2" class="parallax-me">
+            </section>
+            <section class="blurb">
+                <div class="row" style="text-align: left;">
+                    <div class="large-3 columns hide-for-small">
+                        <img style="padding-right: 20px;"src={{ url_for('static', filename='img/services_icon.png') }}>
+                    </div>
+                    <div class="large-9 columns">
+                        <h2>SAM<sup>2</sup></h2>
+                        <h3>A repeatable and scalable approach to systems engineering</h3>
+                        <p>We adapt classical systems engineering methods to form our proprietary Systems Assessment &amp; Methodology (SAM<sup>2</sup>), a repeatable approach for solving complex problems. From deciding which IT enterprise a small business should use to overhauling the largest systems of government organizations, BluestoneLogic’s SAM<sup>2</sup> is guaranteed to provide tangible results.</p>
+                    </div>
                 </div>
-            </div>
-        </section>
-        <section style="background: url(../static/img/block.jpg) no-repeat center; background-attachment: fixed; background-size: 100%;" class="spacer-img bkg">
-        </section>
-        <section class="blurb">
-            <div class="row">
-                <div class="col-lg-3">
-                    <img src={{ url_for('static', filename='img/services_icon.png') }}>
+            </section>
+            <section id="img-3" class="parallax-me">
+            </section>
+            <section class="blurb">
+                <div class="row">
+                    <div class="large-9 columns">
+                        <h2>Systems so effective,<br>we use them ourselves</h2>
+                        <p>At BluestoneLogic, we practice what we preach by using state-of-the-art collaboration tools and cloud-based data storage. We feel confident when we tell clients that these modern IT systems make a business or organization more efficient because we use them in-house. Our cloud-based enterprise lets us collaborate remotely and in real time. Our goal is to help your business do the same.</p>
+                    </div>
+                    <div class="large-3 columns hide-for-small">
+                        <img src={{ url_for('static', filename='img/portfolio_icon.png') }}>
+                    </div>
                 </div>
-                <div class="col-lg-9">
-                    <h1>SAM2</h1>
-                    <h3>A repeatable and scalable approach to systems engineering</h3>
-                    <p>We adapt classical systems engineering methods to form our proprietary Systems Assessment & Methodology (SAM2), a repeatable approach for solving complex problems. From deciding which IT enterprise a small business should use to overhauling the largest systems of government organizations, BluestoneLogic’s SAM2 is guaranteed to provide tangible results.</p>
+            </section>
+            <footer id="footer">
+                <div class="row">
+                    <div class="large-12 columns">
+                        <ul>
+                            <li>BluestoneLogic &copy;</a></li>
+                            <li><a href="mailto:info@bluestonelogic.com">info@bluestonelogic.com</a></li>
+                            <li>202-670-3188</li>
+                            <li>1313 Dolley Madison Blvd, McLean, VA 22101</li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </section>
-        <section style="background: url(../static/img/cup.jpg) no-repeat center; background-attachment: fixed; background-size: 100%;" class="spacer-img bkg">
-        </section>
-        <section class="blurb">
-            <div class="row">
-                <div class="col-lg-9 text-left">
-                    <h1>Systems so effective, we use them ourselves</h1>
-                    <p>At BluestoneLogic, we practice what we preach by using state-of-the-art collaboration tools and cloud-based data storage. We feel confident when we tell clients that these modern IT systems make a business or organization more efficient because we use them in-house. Our cloud-based enterprise lets us collaborate remotely and in real time. Our goal is to help your business do the same.</p>
-                </div>
-                <div class="col-lg-3">
-                    <img src={{ url_for('static', filename='img/portfolio_icon.png') }}>
-                </div>
-            </div>
-        </section>
-        <footer id="footer">
-            <div class="row">
-                <div class="large-12 columns">
-                    <ul>
-                        <li>BluestoneLogic &copy;</a></li>
-                        <li><a href="mailto:info@bluestonelogic.com">info@bluestonelogic.com</a></li>
-                        <li>202-670-3188</li>
-                        <li>1313 Dolley Madison Blvd, McLean, VA 22101</li>
-                    </ul>
-                </div>
-            </div>
-        </footer>
+            </footer>
+        </div>
     </div>
     <!-- Placed at the end so the pages load faster -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
