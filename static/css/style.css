@@ -746,7 +746,12 @@ footer#footer #start .icon-mail {
     font-size: 48px;
     font-weight: 300;
     text-align: center;
-    margin-bottom: 60px
+    margin-bottom: 10px
+}
+#difference section#what hr {
+    width: 85px;
+    margin: 30px auto 45px auto;
+    border-color: #73acd9;
 }
 #difference section#what p {
     font-size: 26px;
@@ -760,8 +765,11 @@ footer#footer #start .icon-mail {
    }
    #difference section#what h2 {
        font-size: 38px;
-       margin-bottom: 40px;
+       margin-bottom: 0px;
   }
+  #difference section#what hr {
+    margin: 20px auto 35px auto;
+}
   #difference section#what p {
        font-size: 22px;
        margin-bottom: 0
@@ -777,8 +785,11 @@ footer#footer #start .icon-mail {
    #difference section#what h2 {
         color: #fff;
        font-size: 36px;
-       margin-bottom: 40px;
+       margin-bottom: 0px;
   }
+    #difference section#what hr {
+    margin: 20px auto 35px auto;
+}
   #difference section#what p {
         color: #fff;
        font-size: 20px;
@@ -829,92 +840,101 @@ footer#footer #start .icon-mail {
     margin: 60px 20px; 
     /* find a way to horizontally align this */
 }
-
-#map {
-    width: 100%;
-    height: 70vh;
-    min-height: 400px;
-    position: relative;
+#people #content {
+    top: 76px
 }
-}
-/*video#bgvid {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
+#people section#our-people {
     height: auto;
-    z-index: -100;
-    transform: translateX(-50%) translateY(-50%);
-    background: url(../video/preview.png) no-repeat;
-    background-size: cover;
-}*/
-.intro {
-    display: table;
-    width: 100%;
-    height: auto;
-    padding: 100px 0;
-    position: fixed;
+    color: #074575;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    padding: 50px 0
 }
-.intro-body {
-    margin: 0 auto;
-    vertical-align: middle;
-}
-#home-intro-container {
-    margin-top: 350px
-}
-.section-title {
-    text-align: center;
+#people section#our-people h2 {
     font-size: 48px;
-    color: #074575;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 10px
 }
-.text-left {
-    text-align: left;
+#people section#our-people hr {
+    width: 85px;
+    margin: 30px auto 45px auto;
+    border-color: #73acd9;
 }
-.text-white {
-    color: #fff;
+#people section#our-people p {
+    font-size: 26px;
+    font-weight: 200;
+    text-align: center;
+    margin-bottom: 60px
 }
-.section-contents {
-    font-size: 24px;
+#people section#our-people .cycle-slideshow{
+    position: relative;
+    margin-bottom: 30px;
+    z-index: 30;
 }
-#difference-intro {
-    height: 800px;
-    color: #074575;
-    background: url(../img/whiteboard.jpg) no-repeat center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+#people section#our-people .cycle-slideshow img {
+    width: 100%;
 }
-#intro-container {
-    margin-top: 60px;
+#people section#our-people .cycle-pager {
+    text-align: center;
+    width: auto;
+    margin: 0 auto;
+    z-index: 9;
 }
-#drod {
-    background: url(../img/drod.jpg) no-repeat center;
+#people section#our-people .cycle-pager span {
+    font-family: arial;
+    font-size: 40px;
+    width: 16px;
+    height: 16px;
+    margin-right: 20px;
+    display: inline-block;
+    color: #dedede;
+    cursor: pointer;
 }
-#laid-back-text {
-    margin-bottom: 10px;
-    width: 80%;
-    color: #fff;
+#people section#our-people .cycle-pager span.cycle-pager-active {
+    color: #074575
 }
-#careers-container {
-    height: 100%;
-    background: url(../img/office1_opac.jpg) no-repeat center;
-    background-attachment: fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+@media (max-width: 1149px) {
+    #people section#our-people {
+        padding: 180px 0;
+   }
+   #people section#our-people h2 {
+       font-size: 38px;
+       margin-bottom: 0px;
+  }
+  #people section#our-people hr {
+    margin: 20px auto 35px auto;
 }
-#grads-section .blurb, #pros-section .blurb {
-    background: rgba(184, 214, 236, 0.8);
+  #people section#our-people p {
+       font-size: 22px;
+       margin-bottom: 0
+  }
 }
-#the-team {
+@media (max-width: 767px) {
+    #people section#our-people {
+        padding: 45px 0;
+        background-image: none;
+        background-color: #074575;
+        height: auto
+   }
+   #people section#our-people h2 {
+        color: #fff;
+       font-size: 36px;
+       margin-bottom: 0px;
+  }
+    #people section#our-people hr {
+    margin: 20px auto 35px auto;
+}
+  #people section#our-people p {
+        color: #fff;
+       font-size: 20px;
+       margin-bottom: 0
+  }
+}
+
+#people section#team {
     height: auto;
     background: url(../img/metro_opac.jpg) no-repeat center;
     background-attachment: fixed;
@@ -922,29 +942,27 @@ footer#footer #start .icon-mail {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    padding: 80px 0
 }
-/*#the-team{
-    height: auto;
-    background: #73acd9;
-}*/
-#the-team img{
-    opacity: 0.7;
+#people section#team .columns{
+    text-align: center;
 }
-#the-team img:hover,
-#the-team img:focus{
-    opacity: 1;
+#people section#team h2 {
+    font-size: 48px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 80px
 }
-.active-bio {
-    opacity: 1 !important;
+#people section#team h3 {
+    font-size: 32px;
+    font-weight: 300;
+    margin: 20px 0 10px;
 }
-#the-team h1 {
-    margin-bottom: 100px;
+#people section#team h4 {
+    font-size: 24px;
+    color: #444;
 }
-#the-team h2, 
-#the-team h3 {
-    margin: 10px 0 0;
-}
-#the-team p {
+#people section#team p {
     width: 100%;
     text-align: left;
     font-size: 20px;
@@ -952,8 +970,60 @@ footer#footer #start .icon-mail {
     background: rgba(7,69,117,.8);
     padding: 10px;
 }
-.headshots{
+#people section#team img{
+    opacity: 0.7;
+}
+#people section#team img:hover,
+#people section#team img:active {
+    opacity: 1;
+}
+#people section#team .headshots{
     padding-bottom: 50px;
+}
+#people section#team .active-bio {
+    opacity: 1 !important;
+}
+@media (max-width: 1149px) {
+    #people section#our-people {
+        padding: 180px 0;
+   }
+   #people section#our-people h2 {
+       font-size: 38px;
+       margin-bottom: 0px;
+  }
+  #people section#our-people p {
+       font-size: 22px;
+       margin-bottom: 0
+  }
+}
+@media (max-width: 767px) {
+    #people section#our-people {
+        padding: 45px 0;
+        background-image: none;
+        background-color: #074575;
+        height: auto
+   }
+   #people section#our-people h2 {
+        color: #fff;
+       font-size: 36px;
+       margin-bottom: 0px;
+  }
+  #people section#our-people p {
+        color: #fff;
+       font-size: 20px;
+       margin-bottom: 0
+  }
+}
+#map {
+    width: 100%;
+    height: 70vh;
+    min-height: 400px;
+    position: relative;
+}
+}
+
+#grads-section .blurb, #pros-section .blurb {
+    background: rgba(184, 214, 236, 0.8);
 }
 #contact {
     height: auto;
@@ -982,122 +1052,7 @@ footer#footer #start .icon-mail {
 .intro-text {
     font-size: 18px;
 }
-.column-3 {
-    float: left;
-    width: 33.3333%;
-    position: relative;
-    min-height: 1px;
-    padding: 0 20px;
-}
-.column-3 img {
-    height: 30%;
-}
-.btn-circle {
-    width: 70px;
-    height: 70px;
-    margin-top: 15px;
-    padding: 7px 16px;
-    border: 2px solid #fff;
-    border-radius: 35px;
-    font-size: 40px;
-    color: #fff;
-    background: 0 0;
-    -webkit-transition: background .3s ease-in-out;
-    -moz-transition: background .3s ease-in-out;
-    transition: background .3s ease-in-out;
-}
-.btn-circle:hover, .btn-circle:focus {
-    outline: 0;
-    color: #fff;
-    background: rgba(255, 255, 255, .1);
-}
-.page-scroll .btn-circle i.animated {
-    -webkit-transition-property: -webkit-transform;
-    -webkit-transition-duration: 1s;
-    -moz-transition-property: -moz-transform;
-    -moz-transition-duration: 1s;
-}
-.page-scroll .btn-circle:hover i.animated {
-    -webkit-animation-name: pulse;
-    -moz-animation-name: pulse;
-    -webkit-animation-duration: 1.5s;
-    -moz-animation-duration: 1.5s;
-    -webkit-animation-iteration-count: infinite;
-    -moz-animation-iteration-count: infinite;
-    -webkit-animation-timing-function: linear;
-    -moz-animation-timing-function: linear;
-}
-@-webkit-keyframes pulse {
-    0 {
-        -webkit-transform: scale(1);
-        transform: scale(1);
-   }
-   50% {
-       -webkit-transform: scale(1.2);
-       transform: scale(1.2);
-  }
-  100% {
-      -webkit-transform: scale(1);
-      transform: scale(1);
- }
-}
-@-moz-keyframes pulse {
-    0 {
-        -moz-transform: scale(1);
-        transform: scale(1);
-   }
-   50% {
-       -moz-transform: scale(1.2);
-       transform: scale(1.2);
-  }
-  100% {
-      -moz-transform: scale(1);
-      transform: scale(1);
- }
-}
-.top-space {
-    top: 800px;
-}
-.content-section {
-    height: 760px;
-    width: 100%;
-    text-align: center;
-    position: relative;
-    background: #fff;
-    padding-top: 100px;
-}
-.text-banner {
-    height: auto;
-    width: 100%;
-    background: rgb(115, 172, 217);
-    color: #fff;
-    text-align: center;
-    background: rgb(115, 172, 217);
-    position: relative;
-    padding: 50px 0 20px;
-}
-.blurb {
-    height: auto;
-    width: 100%;
-    background: #fff;
-    color: #074575;
-    text-align: right;
-    position: relative;
-    padding: 100px 0;
-}
-div .blurb {
-    position: inherit;
-}
-.blurb p {
-    font-size: 20px;
-    margin: 0;
-}
-.blurb h1 {
-    font-size: 48px;
-}
-.blurb img {
-    width: 220px;
-}
+
 .careers-selection {
     width: 100%;
     max-width: 1100px;
@@ -1115,9 +1070,6 @@ div .blurb {
 }
 .careers-selection div img:hover {
     opacity: 1;
-}
-.cycle-slideshow img {
-    width: 100%;
 }
 .btn {
     text-transform: uppercase;
