@@ -1,12 +1,21 @@
 // collapse the navbar on scroll
 $(function() {
-    if(document.body.id != 'index'){
+    if ($(window).width() <= 767) {
         $("#nav").addClass("stuck");
     }
-    else $("#content").waypoint(function() {
-        $("#nav").toggleClass("stuck")
-    }, {
-        offset: 160
+    else if (document.body.id == 'index'){
+        $("#content").waypoint(function() {
+            $("#nav").toggleClass("stuck")
+        }, {
+            offset: 160
+        });
+    }
+    else $("#nav").addClass("stuck");
+});
+$(function() {
+    $("#showMenu").click(function() {
+        $("#slide-menu").toggleClass("open");
+        $("#content").toggleClass("pushLeft");
     });
 });
 /*
@@ -18,11 +27,11 @@ $(document).ready(function() {
     $("#grads").click(function() {
         // simply switch content if other section is currrently active 
         if ($("#pros-section").is(':visible')) {
-            $(".pros-toggle").toggle();
-            $(".grads-toggle").toggle();
+            $("#pros-section").toggle();
+            $("#grads-section").toggle();
         }
         // toggle section
-        else $(".grads-toggle").toggle("blind");
+        else $("#grads-section").toggle("blind");
         //move to top of the section
         if ($("#grads-section").is(':visible')) {
             $("html, body").animate({
@@ -34,11 +43,11 @@ $(document).ready(function() {
     $("#pros").click(function() {
         // simply switch content if other section is currrently active 
         if ($("#grads-section").is(':visible')) {
-            $(".grads-toggle").toggle();
-            $(".pros-toggle").toggle();
+            $("#grads-section").toggle();
+            $("#pros-section").toggle();
         }
         // toggle section
-        else $(".pros-toggle").toggle("blind");
+        else $("#pros-section").toggle("blind");
         //move to top of the section
         if ($("#pros-section").is(':visible')) {
             $("html, body").animate({

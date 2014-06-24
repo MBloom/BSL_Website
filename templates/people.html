@@ -29,15 +29,23 @@
         <link rel="stylesheet" href={{ url_for('static', filename='css/style.css') }}>
     </head>
     <body id="people">
-        <!-- navbar -->
+        <nav id="slide-menu">
+            <ul>
+                <li><a href={{ url_for('difference') }}>The Difference</a></li>
+                <li><a href={{ url_for('our_people') }}>Our People</a></li>
+                <li><a href={{ url_for('careers') }}>Careers</a></li>
+                <li><a href={{ url_for('contact') }}>Contact</a></li>
+            </ul>
+        </nav>
         <header id="nav">
             <div class="row">
                 <nav id="navigation" class="right">
                     <a href={{ url_for('home') }} id="logo">
-                    <img src={{ url_for('static', filename='img/bsl_white.png') }}>
+                        <img src={{ url_for('static', filename='img/bsl_white.png') }}>
                     </a>
                     <!--<img class="bsl-words">-->
                     <ul>
+                        <li class="show-for-small" id="showMenu"><i class="fa fa-bars"></i></li>
                         <li><a href={{ url_for('difference') }}>The Difference</a></li>
                         <li><a href={{ url_for('our_people') }}>Our People</a></li>
                         <li><a href={{ url_for('careers') }}>Careers</a></li>

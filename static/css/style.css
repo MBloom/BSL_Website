@@ -3,6 +3,7 @@ body {
     height: 100%;
     font-family: "Roboto";
     font-weight: 100;
+    position: relative;
     color: #074575;
     background-color: #fff;
 }
@@ -153,11 +154,58 @@ a:hover, a:focus {
 #content {
     position: relative;
     top: 724px;
+    left: 0;
     height: 100%;
-    background: #fff
+    background: #fff;
+    left: 0;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#content.pushLeft{
+    left: -240px;
 }
 #content.no-collapse {
     top: 147px
+}
+nav#slide-menu {
+    right: -240px;
+    width: 240px;
+    height: 100%;
+    top: 74px;
+    z-index: 1000;
+    text-align: right;
+    background: #ccc;
+    position: fixed;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+nav#slide-menu.open {
+    right: 0;
+}
+nav#slide-menu ul {
+    display: block;
+    margin: 25px;
+    padding: 0;
+    list-style: none;
+    -moz-transition: all 300ms;
+    -webkit-transition: all 300ms;
+    transition: all 300ms;
+}
+nav#slide-menu li {
+    font-size: 28px;
+    font-weight: 300;
+    padding: 6px 0;
+    cursor: pointer;
+}
+nav#slide-menu li a {
+    color: #074575;
+}
+nav#slide-menu li:last-child { 
+    margin-top: 14px; 
+    padding-top: 14px; 
+    border-top: 1px solid #777; 
 }
 #index section#intro {
     height: 100%;
@@ -221,11 +269,6 @@ header#nav nav#navigation #logo img {
     width: 100%;
     height: 100%
 }
-@media (max-width: 767px) {
-    header#nav nav#navigation #logo {
-        display: none
-   }
-}
 header#nav nav#navigation ul {
     list-style: none;
     margin: 35px 0 0 0;
@@ -243,37 +286,49 @@ header#nav nav#navigation ul li {
 header#nav nav#navigation ul a {
     display: block;
     color: #fff;
+    font-weight: 600;
     padding-bottom: 12px;
-    border-bottom: 2px solid transparent;
+    text-shadow: none;
     text-transform: uppercase;
-    -webkit-transition: all .1s linear;
-    -moz-transition: all .1s linear;
-    -o-transition: all .1s linear;
-    transition: all .1s linear
+    -webkit-transition: color 0.3s;
+    -moz-transition: color 0.3s;
+    transition: color .3s;
 }
-header#nav nav#navigation ul a:hover, 
-header#nav nav#navigation ul a:active, 
+
+header#nav nav#navigation ul a::after {
+    display: inherit;
+    width: 100%;
+    height: 1px;
+    background: #fff;
+    content: '';
+    opacity: 0;
+    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+    -moz-transition: opacity 0.3s, -moz-transform 0.3s;
+    transition: opacity 0.3s, transform 0.3s;
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    transform: translateY(-10px);
+}
+header#nav nav#navigation ul a::after {
+    bottom: 0;
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    transform: translateY(10px);
+}
+header#nav nav#navigation ul a:hover,
 header#nav nav#navigation ul a:focus {
-    text-decoration: line-through;
-    opacity: 0.7;
-    -webkit-transition: all .1s linear;
-    -moz-transition: all .1s linear;
-    -o-transition: all .1s linear;
-    transition: all .1s linear
+    font-weight: 400;
+    color: #73acd9;
 }
-@media (max-width: 1149px) {
-    header#nav nav#navigation ul li {
-        padding-left: 40px
-   }
-}
-@media (max-width: 767px) {
-    header#nav nav#navigation ul {
-        display: none
-   }
+header#nav nav#navigation ul a:hover::after,
+header#nav nav#navigation ul a:focus::after {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    transform: translateY(0px);
 }
 header#nav.stuck {
     background: #074575;
-    opacity: 0.8;
     -webkit-transition: background .2s linear;
     -moz-transition: background .2s linear;
     -o-transition: background .2s linear;
@@ -297,28 +352,35 @@ header#nav.stuck nav#navigation #logo {
 header#nav.stuck nav#navigation ul {
     margin-top: 15px
 }
+header#nav.stuck nav#navigation ul li.show-for-small{
+    color: #fff;
+    font-size: 32px;
+}
 @media (max-width: 1149px) {
     header#nav.stuck nav#navigation {
         padding: 13px
    }
-   header#nav.stuck nav#navigation ul li {
+   header#nav nav#navigation ul li {
        padding-left: 40px
   }
 }
 @media (max-width: 767px) {
     header#nav.stuck nav#navigation {
-        padding: 13px 0
+        padding: 13px
+   }
+    header#nav nav#navigation #logo,
+    header#nav nav#navigation ul li {
+        display: none
    }
    header#nav.stuck nav#navigation #logo {
        display: block;
-       margin-left: 13px
   }
   header#nav.stuck nav#navigation ul {
       display: block;
-      padding-top: 0
+      margin-top: 0
  }
  header#nav.stuck nav#navigation ul li {
-     padding-left: 10px
+     display: none;
 }
 }
 header#header {
@@ -331,15 +393,16 @@ header#header {
     z-index: 28
 }
 header#header h1#brand {
+    font-family: Lato;
     font-size: 48px;
-    line-height: 1.5;
     font-weight: 300;
+    letter-spacing: -2px;
+    line-height: 1.5;
     text-transform: lowercase;
     color: #fff;
-    margin-bottom: 30px;
     z-index: 1001;
     width: 420px;
-    margin-top: 335px
+    margin: 335px 0 30px 70px
 }
 @media (max-width: 1149px) {
     header#header h1#brand{
@@ -351,7 +414,7 @@ header#header h1#brand {
         background-position: center center
    }
    header#header h1#brand {
-       margin-top: 100px;
+       margin-top: 150px;
        font-size: 28px
   }
 }
@@ -615,33 +678,89 @@ footer#footer #start .icon-mail {
 }
 #index section#learn {
     background: #C3D1DC;
-    padding: 80px 0
+    padding: 80px 0;
+    position: relative;
+    display: block;
+    text-align: center;
+    z-index: 1;
 }
 #index section#learn a {
-    color: #fff;
-    text-decoration: none;
-    -webkit-transition: all .3s ease;
-    -moz-transition: all .3s ease;
-    transition: all .3s ease
-}
-#index section#learn a:hover {
+    display: block;
     color: #074575;
-    text-decoration: line-through;
-}
-#index section#learn h2 {
     font-size: 42px;
     font-weight: 300;
-    text-align: center;
-    margin-bottom: 0
+    -webkit-transition: color 0.3s;
+    -moz-transition: color 0.3s;
+    transition: color 0.3s;
 }
-@media (max-width: 1024px) {
+
+#index section#learn a::before,
+#index section#learn a::after {
+    position: absolute;
+    width: 40%;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 2px;
+    margin: 0 auto;
+    background: #074575;
+    content: '';
+    display: block;
+    text-align: center;
+    z-index: -1;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+    -moz-transition: -moz-transform 0.3s, opacity 0.3s;
+    transition: transform 0.3s, opacity 0.3s;
+    pointer-events: none;
+}
+
+#index section#learn a::before {
+    -webkit-transform: translateY(-80px);
+    -moz-transform: translateY(-80px);
+    transform: translateY(-80px);
+}
+
+#index section#learn a::after {
+    -webkit-transform: translateY(80px);
+    -moz-transform: translateY(80px);
+    transform: translateY(80px);
+}
+
+#index section#learn a:hover,
+#index section#learn a:focus {
+    color: #fff;
+}
+
+#index section#learn a:hover::before,
+#index section#learn a:hover::after,
+#index section#learn a:focus::before,
+#index section#learn a:focus::after {
+    height: 1px;
+    opacity: 0.7;
+}
+
+#index section#learn a:hover::before,
+#index section#learn a:focus::before {
+    -webkit-transform: rotate(30deg);
+    -moz-transform: rotate(30deg);
+    transform: rotate(30deg);
+}
+
+#index section#learn a:hover::after,
+#index section#learn a:focus::after {
+    -webkit-transform: rotate(-30deg);
+    -moz-transform: rotate(-30deg);
+    transform: rotate(-30deg);
+}
+@media (max-width: 1149px) {
     #index section#learn {
         padding: 70px 0
     }
     #index section#how h2{
         font-size: 48px;
     }
-    #index section#learn h2 {
+    #index section#learn h2,
+    #index section#learn a {
        font-size: 32px
     }
     #index section#how h3 {
@@ -694,7 +813,26 @@ footer#footer #start .icon-mail {
     color: #fff;
     font-weight: 300;
     text-align: left;
-    margin-bottom: 30px
+    position: relative;
+    margin-bottom: 20px
+}
+#index section#who a:before {
+    font-family: 'FontAwesome';
+    content: "\f178";
+    left: 70%;
+    opacity: 1;
+    top: 0;
+    position: absolute;
+    height: 100%;
+    font-size: 125%;
+    color: #fff;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+#index section#who a:hover:before {
+    left: 80%;
+    opacity: 1;
 }
 @media (max-width: 767px) {
     #index section#who {
@@ -730,7 +868,7 @@ footer#footer #start .icon-mail {
  }
 }
 #difference #content {
-    top: 76px
+    top: 0
 }
 #difference section#what {
     height: 800px;
@@ -740,7 +878,7 @@ footer#footer #start .icon-mail {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    padding: 90px 0
+    padding: 120px 0
 }
 #difference section#what h2 {
     font-size: 48px;
@@ -758,43 +896,6 @@ footer#footer #start .icon-mail {
     font-weight: 00;
     text-align: center;
     margin-bottom: 60px
-}
-@media (max-width: 1149px) {
-    #difference section#what {
-        padding: 180px 0;
-   }
-   #difference section#what h2 {
-       font-size: 38px;
-       margin-bottom: 0px;
-  }
-  #difference section#what hr {
-    margin: 20px auto 35px auto;
-}
-  #difference section#what p {
-       font-size: 22px;
-       margin-bottom: 0
-  }
-}
-@media (max-width: 767px) {
-    #difference section#what {
-        padding: 45px 0;
-        background-image: none;
-        background-color: #074575;
-        height: auto
-   }
-   #difference section#what h2 {
-        color: #fff;
-       font-size: 36px;
-       margin-bottom: 0px;
-  }
-    #difference section#what hr {
-    margin: 20px auto 35px auto;
-}
-  #difference section#what p {
-        color: #fff;
-       font-size: 20px;
-       margin-bottom: 0
-  }
 }
 #difference section#img-1 {
     background: url(../img/drod.jpg) no-repeat center;
@@ -840,8 +941,51 @@ footer#footer #start .icon-mail {
     margin: 60px 20px; 
     /* find a way to horizontally align this */
 }
+@media (max-width: 1149px) {
+    #difference section#what {
+        padding: 180px 0;
+   }
+   #difference section#what h2 {
+       font-size: 38px;
+       margin-bottom: 0px;
+  }
+  #difference section.blurb h2 {
+        font-size: 38px
+    }
+  #difference section#what hr {
+    margin: 20px auto 35px auto;
+}
+  #difference section#what p {
+       font-size: 22px;
+       margin-bottom: 0
+  }
+}
+@media (max-width: 767px) {
+    #difference section#what {
+        padding: 45px 0;
+        background-image: none;
+        background-color: #074575;
+        height: auto
+   }
+   #difference section#what h2 {
+        color: #fff;
+       font-size: 36px;
+       margin-bottom: 0px;
+  }
+  #difference section.blurb h2 {
+    font-size: 36px
+}
+    #difference section#what hr {
+    margin: 20px auto 35px auto;
+}
+  #difference section#what p {
+        color: #fff;
+       font-size: 20px;
+       margin-bottom: 0
+  }
+}
 #people #content {
-    top: 76px
+    top: 0
 }
 #people section#our-people {
     height: auto;
@@ -850,7 +994,7 @@ footer#footer #start .icon-mail {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    padding: 50px 0
+    padding: 120px 0
 }
 #people section#our-people h2 {
     font-size: 48px;
@@ -933,7 +1077,6 @@ footer#footer #start .icon-mail {
        margin-bottom: 0
   }
 }
-
 #people section#team {
     height: auto;
     background: url(../img/metro_opac.jpg) no-repeat center;
@@ -1014,28 +1157,140 @@ footer#footer #start .icon-mail {
        margin-bottom: 0
   }
 }
-#map {
+#careers #selection {
+    height: 100%;
+    color: #074575;
+    background: url(../img/office1_opac.jpg) no-repeat center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding: 120px 0
+}
+#careers #selection section#overview h2 {
+    font-size: 48px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 10px
+}
+#careers #selection section#overview h3 {
+    font-size: 32px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 30px
+}
+#careers #selection section#overview  hr {
+    width: 85px;
+    margin: 30px auto 45px auto;
+    border-color: #73acd9;
+}
+#careers #selection section#overview  p {
+    font-size: 26px;
+    font-weight: 200;
+    text-align: center;
+}
+#careers #selection #careers-selection {
     width: 100%;
-    height: 70vh;
-    min-height: 400px;
+    max-width: 1100px;
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+}
+#careers #selection #careers-selection div {
+    width: 50%;
+    float: left;
+}
+#careers #selection #careers-selection div img {
+    opacity: 0.5;
+    width: 400px;
+    height: 250px;
+}
+#careers #selection #careers-selection div img:hover {
+    opacity: 1;
+}
+@media (max-width: 767px) {
+   #careers #selection section#overview h2 {
+       font-size: 36px;
+       margin-bottom: 0px
+  }
+  #careers #selection section#overview h3 {
+       font-size: 26px;
+       margin-bottom: 15px;
+  }
+  #careers #selection section#overview hr {
+    margin: 20px auto 35px auto;
+}
+ #careers #selection section#overview  p {
+       font-size: 20px;
+  }
+}
+#careers #grads-section,
+#careers #pros-section {
+    height:100%; 
+    display:none; 
+    position:inherit;
+}
+#careers #grads-section .blurb, 
+#careers #pros-section .blurb {
+    background: rgba(184, 214, 236, 0.8);
+    height: auto;
+    width: 100%;
+    text-align: right;
+    position: inherit;
+    padding: 100px 0;
+}
+#careers #grads-section .blurb p, 
+#careers #pros-section .blurb p {
+    font-size: 20px;
+    margin: 0;
+}
+#careers #grads-section .blurb h2, 
+#careers #pros-section .blurb h2 {
+    font-size: 48px;
+    font-weight: 300
+}
+#careers #grads-section .blurb img, 
+#careers #pros-section .blurb img {
+    width: 100%;
+    margin: 60px 20px; 
+    /* find a way to horizontally align this */
+}
+#careers #grads-section section#img-1 {
+    background: url(../img/block.jpg);
+    background-attachment: fixed; 
+    height: 70%;
+    width: 100%;
     position: relative;
 }
+#careers #grads-section section#img-2 {
+    background: url(../img/block.jpg);
+    background-attachment: fixed; 
+    height: 70%;
+    width: 100%;
+    position: relative;
 }
-
-#grads-section .blurb, #pros-section .blurb {
-    background: rgba(184, 214, 236, 0.8);
+#connect #content {
+    top: 0
 }
-#contact {
+#connect section#contact {
     height: auto;
+    text-align: center;
+    color: 074575;
     background: #73acd9;
+    padding-top: 120px
 }
-#contact h1 {
+#connect section#contact h2 {
+    font-size: 38px;
     font-weight: 300;
+    width: 200px;
+    margin: 0 auto 25px
 }
-#contact p {
+#connect section#contact p {
+    font-size: 24px;
     color: #fff;
 }
-#spacers {
+#connect section#contact #spacers {
     width: 100%;
     border-left: 1px solid #CCC;
     border-right: 1px solid #CCC;
@@ -1044,6 +1299,29 @@ footer#footer #start .icon-mail {
     position: absolute;
     top: -5%;
 }
+#connect #map {
+    width: 100%;
+    height: 70%;
+    min-height: 400px; 
+    position: relative;
+}
+@media (max-width: 1149px) {
+   #connect section#contact h2 {
+       font-size: 32px;
+  }
+  #connect section#contact p {
+       font-size: 20px;
+  }
+}
+@media (max-width: 767px) {
+   #connect section#contact h2 {
+       font-size: 32px;
+       width: 100%;
+  }
+  #connect section#contact p {
+       font-size: 20px;
+  }
+}
 .brand-heading {
     font-size: 36px;
     line-height: 1.5;
@@ -1051,25 +1329,6 @@ footer#footer #start .icon-mail {
 }
 .intro-text {
     font-size: 18px;
-}
-
-.careers-selection {
-    width: 100%;
-    max-width: 1100px;
-    position: absolute;
-    bottom: 0;
-}
-.careers-selection div {
-    width: 50%;
-    float: left;
-}
-.careers-selection div img {
-    opacity: 0.5;
-    width: 400px;
-    height: 250px;
-}
-.careers-selection div img:hover {
-    opacity: 1;
 }
 .btn {
     text-transform: uppercase;
@@ -1127,7 +1386,4 @@ img::selection {
 }
 img::-moz-selection {
     background: 0 0;
-}
-body {
-    webkit-tap-highlight-color: rgba(255, 255, 255, .2);
 }

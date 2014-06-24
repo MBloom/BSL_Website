@@ -29,15 +29,23 @@
         <link rel="stylesheet" href={{ url_for('static', filename='css/style.css') }}>
     </head>
     <body id="difference">
-        <!-- navbar -->
+        <nav id="slide-menu">
+            <ul>
+                <li><a href={{ url_for('difference') }}>The Difference</a></li>
+                <li><a href={{ url_for('our_people') }}>Our People</a></li>
+                <li><a href={{ url_for('careers') }}>Careers</a></li>
+                <li><a href={{ url_for('contact') }}>Contact</a></li>
+            </ul>
+        </nav>
         <header id="nav">
             <div class="row">
                 <nav id="navigation" class="right">
                     <a href={{ url_for('home') }} id="logo">
-                    <img src={{ url_for('static', filename='img/bsl_white.png') }}>
+                        <img src={{ url_for('static', filename='img/bsl_white.png') }}>
                     </a>
                     <!--<img class="bsl-words">-->
                     <ul>
+                        <li class="show-for-small" id="showMenu"><i class="fa fa-bars"></i></li>
                         <li><a href={{ url_for('difference') }}>The Difference</a></li>
                         <li><a href={{ url_for('our_people') }}>Our People</a></li>
                         <li><a href={{ url_for('careers') }}>Careers</a></li>
@@ -52,8 +60,7 @@
                     <div class="large-10 large-offset-1 columns">
                         <h2>The Difference</h2>
                         <hr>
-                        <p>Today, our customers are challenged to provide more services, better reliability, and flexible capability—within lower budgets. In the past, IT decision-makers decreased costs by cutting services, shelving projects, and espousing system maintenance. This approach sacrifices quality and is counterproductive to the objective of long-term cost savings. The resulting outdated systems hinder the ability to deploy needed applications and services; pose cyber security risks; and strain resources, people, and processes.</p>
-                        <p>Conversely, our approach tackles these modernization challenges by integrating and replacing legacy systems with compatible new technologies to reduce overall costs.</p>
+                        <p>Today, our customers are challenged to provide more services, better reliability, and flexible capability—within lower budgets. In the past, IT decision-makers decreased costs by cutting services, shelving projects, and espousing system maintenance. This approach sacrifices quality and is counterproductive to the objective of long-term cost savings. The resulting outdated systems hinder the ability to deploy needed applications and services; pose cyber security risks; and strain resources, people, and processes.<br><br>Conversely, our approach tackles these modernization challenges by integrating and replacing legacy systems with compatible new technologies to reduce overall costs.</p>
                     </div>
                 </div>
             </section>
@@ -111,7 +118,6 @@
                 </div>
             </footer>
         </div>
-    </div>
     <!-- Placed at the end so the pages load faster -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
@@ -123,5 +129,5 @@
     <script>window.jQuery || document.write('<script src="{{ url_for('static', filename='js/jquery.parallax.min.js') }}">\x3C/script>')</script>
     <script src="{{ url_for('static', filename='js/waypoints.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
-</body>
+    </body>
 </html>
