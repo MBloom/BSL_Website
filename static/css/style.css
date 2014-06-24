@@ -1042,23 +1042,23 @@ footer#footer #start .icon-mail {
 }
 @media (max-width: 1149px) {
     #people section#our-people {
-        padding: 180px 0;
-   }
-   #people section#our-people h2 {
-       font-size: 38px;
-       margin-bottom: 0px;
-  }
-  #people section#our-people hr {
-    margin: 20px auto 35px auto;
-}
-  #people section#our-people p {
-       font-size: 22px;
-       margin-bottom: 0
-  }
+        padding: 120px 0;
+    }
+    #people section#our-people h2 {
+        font-size: 38px;
+        margin-bottom: 0px;
+    }
+    #people section#our-people hr {
+        margin: 20px auto 35px auto;
+    }
+    #people section#our-people p {
+        font-size: 22px;
+        margin-bottom: 35px
+    }
 }
 @media (max-width: 767px) {
     #people section#our-people {
-        padding: 45px 0;
+        padding: 100px 0;
         background-image: none;
         background-color: #074575;
         height: auto
@@ -1067,15 +1067,18 @@ footer#footer #start .icon-mail {
         color: #fff;
        font-size: 36px;
        margin-bottom: 0px;
-  }
+    }
     #people section#our-people hr {
-    margin: 20px auto 35px auto;
-}
-  #people section#our-people p {
+        margin: 20px auto 35px auto;
+    }
+    #people section#our-people p {
         color: #fff;
-       font-size: 20px;
-       margin-bottom: 0
-  }
+        font-size: 20px;
+        margin-bottom: 20px
+    }
+    #people section#our-people .cycle-pager span.cycle-pager-active {
+        color: #777
+    }
 }
 #people section#team {
     height: auto;
@@ -1094,37 +1097,7 @@ footer#footer #start .icon-mail {
     font-size: 48px;
     font-weight: 300;
     text-align: center;
-    margin-bottom: 80px
-}
-#people section#team h3 {
-    font-size: 32px;
-    font-weight: 300;
-    margin: 20px 0 10px;
-}
-#people section#team h4 {
-    font-size: 24px;
-    color: #444;
-}
-#people section#team p {
-    width: 100%;
-    text-align: left;
-    font-size: 20px;
-    color: #fff;
-    background: rgba(7,69,117,.8);
-    padding: 10px;
-}
-#people section#team img{
-    opacity: 0.7;
-}
-#people section#team img:hover,
-#people section#team img:active {
-    opacity: 1;
-}
-#people section#team .headshots{
-    padding-bottom: 50px;
-}
-#people section#team .active-bio {
-    opacity: 1 !important;
+    margin-bottom: 100px
 }
 @media (max-width: 1149px) {
     #people section#our-people {
@@ -1133,10 +1106,6 @@ footer#footer #start .icon-mail {
    #people section#our-people h2 {
        font-size: 38px;
        margin-bottom: 0px;
-  }
-  #people section#our-people p {
-       font-size: 22px;
-       margin-bottom: 0
   }
 }
 @media (max-width: 767px) {
@@ -1150,11 +1119,6 @@ footer#footer #start .icon-mail {
         color: #fff;
        font-size: 36px;
        margin-bottom: 0px;
-  }
-  #people section#our-people p {
-        color: #fff;
-       font-size: 20px;
-       margin-bottom: 0
   }
 }
 #careers #selection {
@@ -1386,4 +1350,102 @@ img::selection {
 }
 img::-moz-selection {
     background: 0 0;
+}
+.grid {
+    overflow: hidden;
+    margin: 0;
+    padding: 3em 0 0 0;
+    width: 100%;
+    list-style: none;
+    text-align: center;
+}
+
+/* Common style */
+figure {
+    position: relative;
+    overflow: hidden;
+    width: 330px;
+    height: 330px;
+    text-align: center;
+    background: #074575;
+    cursor: pointer;
+    margin: 0 auto 15%;
+}
+figure h4 {
+    margin: 0;
+    word-spacing: -0.15em;
+    font-size: 28px;
+    font-weight: 300;
+    text-transform: uppercase;
+    padding: 0;
+    -webkit-transition: padding 0.35s, -webkit-transform 0.35s;
+    transition: padding 0.35s, transform 0.35s;
+}
+figure.effect-chico:hover h4{
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+figure h4 span {
+    font-weight: 800;
+}
+figure p {
+    margin: 0 auto;
+    background: transparent;
+    width: 90%;
+    font-size: 14px;
+    font-weight: 300;
+    opacity: 0;
+    -webkit-transform: scale(.85);
+    transform: scale(.85);
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+}
+figure img {
+    position: relative;
+    display: block;
+    min-height: 100%;
+    width: 100%;
+    opacity: 1;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+figure.effect-chico:hover img {
+    opacity: 0.3;
+    -webkit-transform: scale(1.12);
+    transform: scale(1.12);
+}
+figure figcaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    color: #fff;
+    font-size: 1.25em;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+figure.effect-chico figcaption::before {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    bottom: 20px;
+    left: 20px;
+    border: 1px solid #fff;
+    content: '';
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    pointer-events: none;
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+}
+figure.effect-chico:hover figcaption::before,
+figure.effect-chico:hover p {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
 }
