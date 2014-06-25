@@ -424,7 +424,10 @@ header#header h1#brand {
     position: fixed;
     top: 0;
     background: url(../video/preview.png) no-repeat;
-    background-size: cover
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 #index #video-container video{
     min-width: 100%;
@@ -808,19 +811,21 @@ footer#footer #start .icon-mail {
     text-align: left;
     margin-bottom: 60px
 }
-#index section#who p {
+#index section#who p,
+#index section#who a {
     font-size: 28px;
     color: #fff;
     font-weight: 300;
     text-align: left;
     position: relative;
+    display: inline-block;
     margin-bottom: 20px
 }
-#index section#who a:before {
+/*#index section#who a::before {
     font-family: 'FontAwesome';
-    content: "\f178";
+    content: "\f1b6";
     left: 70%;
-    opacity: 1;
+    opacity: 0;
     top: 0;
     position: absolute;
     height: 100%;
@@ -830,10 +835,10 @@ footer#footer #start .icon-mail {
     -moz-transition: all 0.3s;
     transition: all 0.3s;
 }
-#index section#who a:hover:before {
-    left: 80%;
+#index section#who a:hover::before {
+    left: 100%;
     opacity: 1;
-}
+}*/
 @media (max-width: 767px) {
     #index section#who {
         padding: 45px 0;
@@ -903,6 +908,9 @@ footer#footer #start .icon-mail {
     width: 100%;
     position: relative;
     background-attachment: fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
 }
 #difference section#img-2 {
@@ -911,6 +919,9 @@ footer#footer #start .icon-mail {
     width: 100%;
     position: relative;
     background-attachment: fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
 }
 #difference section#img-3 {
@@ -919,6 +930,9 @@ footer#footer #start .icon-mail {
     width: 100%;
     position: relative;
     background-attachment: fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
 }
 #difference section.blurb {
@@ -1154,6 +1168,64 @@ footer#footer #start .icon-mail {
     font-weight: 200;
     text-align: center;
 }
+
+#careers div#buttons{
+    text-align: center;
+    margin-top: 60px;
+}
+#careers .btn-opt {
+    border: 2px solid #074575;
+    border-radius: 10px;
+    color: transparent;
+    background: rgba(115,172,217,0.8);
+    cursor: pointer;
+    padding: 15px 20px;
+    display: inline-block;
+    margin: 15px 60px;
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 300;
+    position: relative;
+    width: 300px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+#careers .btn-opt:after {
+    display: block;
+    position:absolute;
+    top:0;
+    left: 0;
+    right:0;
+    bottom: 0;
+    margin:auto;
+    font-size: 80px;
+    color: #074575;
+    font-family: "FontAwesome";
+    font-weight: normal;
+    font-style: normal;
+    content: ' ';
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+#careers .btn-grad:after {
+    content: "\f19d";
+}
+#careers .btn-pro:after {
+    content: "\f0b1";
+}
+#careers .btn-opt:hover:after{
+    color: transparent;
+}
+#careers .btn-opt:hover,
+#careers .btn-opt:active {
+    color: #074575;
+    background: rgba(115,172,217,1);
+    border: 2px solid #fff;
+}
+
 #careers #selection #careers-selection {
     width: 100%;
     max-width: 1100px;
@@ -1209,6 +1281,17 @@ footer#footer #start .icon-mail {
     font-size: 20px;
     margin: 0;
 }
+#careers #grads-section .blurb a, 
+#careers #pros-section .blurb a {
+    font-size: 20px;
+    font-weight: 300;
+    color: #074575;
+    margin: 0;
+}
+#careers #grads-section .blurb a:hover, 
+#careers #pros-section .blurb a:hover {
+    color: #176e61;
+}
 #careers #grads-section .blurb h2, 
 #careers #pros-section .blurb h2 {
     font-size: 48px;
@@ -1217,23 +1300,177 @@ footer#footer #start .icon-mail {
 #careers #grads-section .blurb img, 
 #careers #pros-section .blurb img {
     width: 100%;
-    margin: 60px 20px; 
+    padding: 25px 0px; 
     /* find a way to horizontally align this */
 }
-#careers #grads-section section#img-1 {
+#careers section#img-1 {
     background: url(../img/block.jpg);
     background-attachment: fixed; 
     height: 70%;
     width: 100%;
     position: relative;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
-#careers #grads-section section#img-2 {
-    background: url(../img/block.jpg);
+#careers section#img-2 {
+    background: url(../img/happy_dan.jpg);
     background-attachment: fixed; 
     height: 70%;
     width: 100%;
     position: relative;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
+#careers section#apply {
+    height: auto;
+    width: 100%;
+    background: rgb(115, 172, 217);
+    color: #fff;
+    text-align: center;
+    position: relative;
+    padding: 50px 0;
+}
+#careers section#apply  a {
+    color: #fff;
+    font-weight: 300;
+    font-size: 38px;
+}
+
+.underline  a {
+    padding: 0 10px;
+}
+
+.underline a::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: #73acd9;
+    content: '';
+    opacity: 0.7;
+}
+
+.underline a::after {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #73acd9;
+    content: '';
+    opacity: 0.7;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.underline a:hover::after {
+    width: 100%;
+}
+
+/*.underline a:hover::before,
+.underline a:hover::after,
+.underline a:focus::before,
+.underline a:focus::after {
+    opacity: 1;
+    width: 100px;
+}
+
+.underline a:hover::before,
+.underline a:focus::before {
+    left: 50%;
+    -webkit-transform: rotate(0deg) translateX(-50%);
+    -moz-transform: rotate(0deg) translateX(-50%);
+    transform: rotate(0deg) translateX(-50%);
+}
+
+.underline a:hover::after,
+.underline a:focus::after {
+    right: 50%;
+    -webkit-transform: rotate(0deg) translateX(50%);
+    -moz-transform: rotate(0deg) translateX(50%);
+    transform: rotate(0deg) translateX(50%);
+}*/
+
+/******************************************/
+
+.border-swap{
+    display: inline-block;
+    position: relative;
+    width: auto;
+}
+
+.border-swap  a {
+    padding: 0 20px;
+    line-height: 55px;
+    text-transform: uppercase;
+}
+
+.border-swap a::before,
+.border-swap a::after {
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    background: #fff;
+    content: '';
+    opacity: 0.3;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    pointer-events: none;
+}
+
+.border-swap a::before {
+    top: 0;
+    left: 0;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    transform: rotate(90deg);
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+.border-swap a::after {
+    right: 0;
+    bottom: 0;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    transform: rotate(90deg);
+    -webkit-transform-origin: 100% 0;
+    -moz-transform-origin: 100% 0;
+    transform-origin: 100% 0;
+}
+
+.border-swap a:hover::before,
+.border-swap a:hover::after,
+.border-swap a:focus::before,
+.border-swap a:focus::after {
+    opacity: 1;
+    width: 100px;
+}
+
+.border-swap a:hover::before,
+.border-swap a:focus::before {
+    left: 50%;
+    -webkit-transform: rotate(0deg) translateX(-50%);
+    -moz-transform: rotate(0deg) translateX(-50%);
+    transform: rotate(0deg) translateX(-50%);
+}
+
+.border-swap a:hover::after,
+.border-swap a:focus::after {
+    right: 50%;
+    -webkit-transform: rotate(0deg) translateX(50%);
+    -moz-transform: rotate(0deg) translateX(50%);
+    transform: rotate(0deg) translateX(50%);
+}
+
 #connect #content {
     top: 0
 }
@@ -1368,7 +1605,6 @@ figure {
     height: 330px;
     text-align: center;
     background: #074575;
-    cursor: pointer;
     margin: 0 auto 15%;
 }
 figure h4 {
