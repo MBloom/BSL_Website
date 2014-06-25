@@ -90,6 +90,7 @@ function init() {
         zoom: 12,
         center: new google.maps.LatLng(38.9185625, -77.0995465),
         mapTypeId: google.maps.MapTypeId.ROADMAP,
+        mapTypeControl: false,
         scrollwheel: false,
         streetViewControl: false,
         styles: [{
