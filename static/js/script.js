@@ -38,7 +38,7 @@ $(document).ready(function() {
                 scrollTop: $("#grads-section").offset().top
             });
         }
-        $("#selection").css({ 'height': "auto" });
+        // $("#selection").css({ 'height': "auto" });
     });
     // professional image is clicked
     $("#pros").click(function() {
@@ -55,9 +55,10 @@ $(document).ready(function() {
                 scrollTop: $("#pros-section").offset().top
             });
         }
-        $("#selection").css({ 'height': "auto" });
+        //$("#selection").css({ 'height': "auto" });
     });
 });
+
 // Slideshow functionality
 $(function() {
     $('.slideshow img:gt(0)').hide();

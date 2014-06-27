@@ -395,7 +395,7 @@ header#header {
 header#header h1#brand {
     font-family: Lato;
     font-size: 48px;
-    font-weight: 300;
+    font-weight: 500;
     letter-spacing: -2px;
     line-height: 1.5;
     text-transform: lowercase;
@@ -687,74 +687,6 @@ footer#footer #start .icon-mail {
     text-align: center;
     z-index: 1;
 }
-#index section#learn a {
-    display: block;
-    color: #074575;
-    font-size: 42px;
-    font-weight: 300;
-    -webkit-transition: color 0.3s;
-    -moz-transition: color 0.3s;
-    transition: color 0.3s;
-}
-
-#index section#learn a::before,
-#index section#learn a::after {
-    position: absolute;
-    width: 40%;
-    left: 0;
-    right: 0;
-    top: 50%;
-    height: 2px;
-    margin: 0 auto;
-    background: #074575;
-    content: '';
-    display: block;
-    text-align: center;
-    z-index: -1;
-    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
-    -moz-transition: -moz-transform 0.3s, opacity 0.3s;
-    transition: transform 0.3s, opacity 0.3s;
-    pointer-events: none;
-}
-
-#index section#learn a::before {
-    -webkit-transform: translateY(-80px);
-    -moz-transform: translateY(-80px);
-    transform: translateY(-80px);
-}
-
-#index section#learn a::after {
-    -webkit-transform: translateY(80px);
-    -moz-transform: translateY(80px);
-    transform: translateY(80px);
-}
-
-#index section#learn a:hover,
-#index section#learn a:focus {
-    color: #fff;
-}
-
-#index section#learn a:hover::before,
-#index section#learn a:hover::after,
-#index section#learn a:focus::before,
-#index section#learn a:focus::after {
-    height: 1px;
-    opacity: 0.7;
-}
-
-#index section#learn a:hover::before,
-#index section#learn a:focus::before {
-    -webkit-transform: rotate(30deg);
-    -moz-transform: rotate(30deg);
-    transform: rotate(30deg);
-}
-
-#index section#learn a:hover::after,
-#index section#learn a:focus::after {
-    -webkit-transform: rotate(-30deg);
-    -moz-transform: rotate(-30deg);
-    transform: rotate(-30deg);
-}
 @media (max-width: 1149px) {
     #index section#learn {
         padding: 70px 0
@@ -825,7 +757,7 @@ footer#footer #start .icon-mail {
     transition: all 0.3s;
 }
 #index section#who a:hover {
-    color: #176e61;
+    color: #73acd9;
 }
 @media (max-width: 767px) {
     #index section#who {
@@ -864,14 +796,17 @@ footer#footer #start .icon-mail {
     top: 0
 }
 #difference section#what {
-    height: 800px;
+    height: auto;
     color: #074575;
     background: url(../img/whiteboard.jpg) no-repeat center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    padding: 120px 0
+    padding: 0
+}
+#difference section#what .row {
+    padding: 120px 0;
 }
 #difference section#what h2 {
     font-size: 48px;
@@ -928,6 +863,9 @@ footer#footer #start .icon-mail {
     width: 100%;
     text-align: right;
     position: relative;
+    padding: 0;
+}
+#difference section.blurb .row{
     padding: 100px 0;
 }
 #difference section.blurb p {
@@ -944,7 +882,7 @@ footer#footer #start .icon-mail {
     /* find a way to horizontally align this */
 }
 @media (max-width: 1149px) {
-    #difference section#what {
+    #difference section#what .row {
         padding: 180px 0;
    }
    #difference section#what h2 {
@@ -964,10 +902,12 @@ footer#footer #start .icon-mail {
 }
 @media (max-width: 767px) {
     #difference section#what {
-        padding: 45px 0;
         background-image: none;
         background-color: #074575;
         height: auto
+   }
+   #difference section#what .row {
+        padding: 100px 0;
    }
    #difference section#what h2 {
         color: #fff;
@@ -1541,93 +1481,99 @@ figure.effect-chico:hover p {
     -webkit-transform: scale(1);
     transform: scale(1);
 }
+/* Underline Text Effect */
 .underline  a {
     padding: 0 10px;
 }
-
 .underline a::before {
     position: absolute;
     top: 0;
     left: 0;
-    width: 2px;
+    width: 1px;
     height: 100%;
-    background: #73acd9;
+    background: #fff;
     content: '';
     opacity: 0.7;
 }
-
 .underline a::after {
     position: absolute;
     top: 100%;
     left: 0;
     width: 0;
-    height: 2px;
-    background: #73acd9;
+    height: 1px;
+    background: #fff;
     content: '';
     opacity: 0.7;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s;
 }
-
 .underline a:hover::after {
     width: 100%;
 }
-
-.box-it  a {
+/* Box Text Effect */
+.box-it a {
     padding: 0 10px;
-    border-bottom: 2px solid rgba(115,172,217,0.7);
+    border-top: 1px solid rgba(255,255,255,0.7);
+    border-bottom: 1px solid rgba(255,255,255,0.7);
+    background: transparent;
+    -webkit-transition: background 0.6s;
+    -moz-transition: background 0.6s;
+    transition: background 0.6s;
 }
-
 .box-it a::before {
     position: absolute;
     top: 0;
     left: 0;
+    bottom: 0;
+    margin: auto 0;
     width: 100%;
     height: 0%;
-    border-right: 2px solid #73acd9;
-    border-left: 2px solid #73acd9;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
     content: '';
     opacity: 0.7;
-    -webkit-transition: all 0.3s 0s;
-    -moz-transition: all 0.3s 0s;
-    transition: all 0.3s 0s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
 }
-
-.box-it a::after {
+/*.box-it a::after {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    margin: 0 auto;
-    width: 0%;
-    height: 100%;
-    border-top: 2px solid #73acd9;
+    bottom: 0;
+    margin: auto 0;
+    width: 100%;
+    height: 0%;
+    border-right: 1px solid #fff;
     content: '';
     opacity: 0.7;
-    -webkit-transition: all 0.3s 0.3s;
-    -moz-transition: all 0.3s 0.3s;
-    transition: all 0.3s 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}*/
+.box-it a:hover {
+    background: rgba(255,255,255,0.2);
 }
-.box-it a:hover::after {
-    width: 100%;
-    -webkit-transition: all 0.3s 0s;
-    -moz-transition: all 0.3s 0s;
-    transition: all 0.3s 0s;
-}
+/*.box-it a:hover::after {
+    height: 100%;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}*/
 .box-it a:hover::before {
     height: 100%;
-    -webkit-transition: all 0.3s 0.3s;
-    -moz-transition: all 0.3s 0.3s;
-    transition: all 0.3s 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
 }
-.border-swap{
+/* Border Swapping Effec */
+.border-swap {
     display: inline-block;
     position: relative;
     width: auto;
 }
-
-.border-swap  a {
+.border-swap a {
     padding: 0 20px;
     line-height: 55px;
     text-transform: uppercase;
@@ -1691,4 +1637,84 @@ figure.effect-chico:hover p {
     -webkit-transform: rotate(0deg) translateX(50%);
     -moz-transform: rotate(0deg) translateX(50%);
     transform: rotate(0deg) translateX(50%);
+}
+/* Cross Effect */
+.cross a {
+    display: block;
+    color: #074575;
+    font-size: 42px;
+    font-weight: 300;
+    -webkit-transition: color 0.3s;
+    -moz-transition: color 0.3s;
+    transition: color 0.3s;
+}
+.cross a::before,
+.cross a::after {
+    position: absolute;
+    width: 30%;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 2px;
+    margin: 0 auto;
+    background: #074575;
+    content: '';
+    display: block;
+    text-align: center;
+    z-index: -1;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+    -moz-transition: -moz-transform 0.3s, opacity 0.3s;
+    transition: transform 0.3s, opacity 0.3s;
+    pointer-events: none;
+}
+
+.cross a::before {
+    -webkit-transform: translateY(-80px);
+    -moz-transform: translateY(-80px);
+    transform: translateY(-80px);
+}
+
+.cross a::after {
+    -webkit-transform: translateY(80px);
+    -moz-transform: translateY(80px);
+    transform: translateY(80px);
+}
+.cross a:hover,
+.cross a:focus {
+    color: #fff;
+}
+
+.cross a:hover::before,
+.cross a:hover::after,
+.cross a:focus::before,
+.cross a:focus::after {
+    opacity: 0.7;
+}
+
+.cross a:hover::before,
+.cross a:focus::before {
+    -webkit-transform: rotate(30deg);
+    -moz-transform: rotate(30deg);
+    transform: rotate(30deg);
+}
+
+.cross a:hover::after,
+.cross a:focus::after {
+    -webkit-transform: rotate(-30deg);
+    -moz-transform: rotate(-30deg);
+    transform: rotate(-30deg);
+}
+/* Semi-circle */
+div.arrow-holder {
+    position: relative;
+    width: 70px;
+    height: 35px;
+    margin: 0 auto;
+}
+.down-arrow {
+    display: block;
+    background: url(../img/down-arrow.png);
+    background-size: contain;
+    width: 70px;
+    height: 35px;
 }

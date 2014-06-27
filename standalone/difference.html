@@ -63,10 +63,11 @@
                         <p>Today, our customers are challenged to provide more services, better reliability, and flexible capability—within lower budgets. In the past, IT decision-makers decreased costs by cutting services, shelving projects, and espousing system maintenance. This approach sacrifices quality and is counterproductive to the objective of long-term cost savings. The resulting outdated systems hinder the ability to deploy needed applications and services; pose cyber security risks; and strain resources, people, and processes.<br><br>Conversely, our approach tackles these modernization challenges by integrating and replacing legacy systems with compatible new technologies to reduce overall costs.</p>
                     </div>
                 </div>
+                <div class="arrow-holder"><span class="down-arrow" onclick="scrollTo('#samcloud');"></span></div>
             </section>
             <section id="img-1" class="parallax-me">
             </section>
-            <section class="blurb">
+            <section class="blurb" id="samcloud">
                 <div class="row">
                     <div class="large-9 columns">
                         <h2>SAMcloud</h2>
@@ -77,10 +78,11 @@
                         <img src="../static/img/samcloud_icon.png">
                     </div>
                 </div>
+                <div class="arrow-holder"><span class="down-arrow" onclick="scrollTo('#sam2');"></span></div>
             </section>
             <section id="img-2" class="parallax-me">
             </section>
-            <section class="blurb">
+            <section class="blurb" id="sam2">
                 <div class="row" style="text-align: left;">
                     <div class="large-3 columns hide-for-small">
                         <img style="padding-right: 20px;"src="../static/img/services_icon.png">
@@ -91,10 +93,11 @@
                         <p>We adapt classical systems engineering methods to form our proprietary Systems Assessment &amp; Methodology (SAM<sup>2</sup>), a repeatable approach for solving complex problems. From deciding which IT enterprise a small business should use to overhauling the largest systems of government organizations, BluestoneLogic’s SAM<sup>2</sup> is guaranteed to provide tangible results.</p>
                     </div>
                 </div>
+                <div class="arrow-holder"><span class="down-arrow" onclick="scrollTo('#systems');"></span></div>
             </section>
             <section id="img-3" class="parallax-me">
             </section>
-            <section class="blurb">
+            <section class="blurb" id="systems">
                 <div class="row">
                     <div class="large-9 columns">
                         <h2>Systems so effective,<br>we use them ourselves</h2>
@@ -129,5 +132,17 @@
     <script>window.jQuery || document.write('<script src="../static/js/jquery.parallax.min.js">\x3C/script>')</script>
     <script src="../static/js/waypoints.min.js"></script>
     <script src="../static/js/script.js"></script>
+    <script type="text/javascript">
+    function scrollTo(target) {
+        var scrollSpeed = 700;
+        var top = $(target).offset().top;
+        var halfWindow = $(window).height() / 2;
+        var halfTarget = $(target).height() / 2;
+        // var navHeight = document.getElementById('nav').clientHeight;
+        // var footHeight = document.getElementById('footer').clientHeight;
+        var offset = top - halfWindow + halfTarget;
+        $('html, body').animate({scrollTop:offset}, scrollSpeed);
+    }
+    </script>
     </body>
 </html>
