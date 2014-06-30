@@ -1041,11 +1041,15 @@ footer#footer #start .icon-mail {
 #people section#team .columns{
     text-align: center;
 }
+#people section#team hr {
+    width: 85px;
+    margin: 30px auto 45px auto;
+    border-color: #73acd9;
+}
 #people section#team h2 {
     font-size: 48px;
     font-weight: 300;
     text-align: center;
-    margin-bottom: 100px
 }
 @media (max-width: 1149px) {
     #people section#our-people {
