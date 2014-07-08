@@ -24,6 +24,7 @@ $( document ) is only available after the document has loaded
 $( window ) is available before the document loads/is ready
 */
 $(document).ready(function() {
+    var off, top, halfWindow, halfSection;
     $("#grads").click(function() {
         // simply switch content if other section is currrently active 
         if ($("#pros-section").is(':visible')) {
@@ -31,11 +32,15 @@ $(document).ready(function() {
             $("#grads-section").toggle();
         }
         // toggle section
-        else $("#grads-section").toggle("blind");
+        else $("#grads-section").slideToggle("slow");
         //move to top of the section
         if ($("#grads-section").is(':visible')) {
+            top = $("#grads-section").offset().top;
+            halfWindow = $(window).height() / 2;
+            halfSection = $("#grad-blurb").height();
+            off = top - halfWindow + halfSection;
             $("html, body").animate({
-                scrollTop: $("#grads-section").offset().top
+                scrollTop: off
             });
         }
         // $("#selection").css({ 'height': "auto" });
@@ -48,11 +53,15 @@ $(document).ready(function() {
             $("#pros-section").toggle();
         }
         // toggle section
-        else $("#pros-section").toggle("blind");
+        else $("#pros-section").slideToggle("slow");
         //move to top of the section
         if ($("#pros-section").is(':visible')) {
+            top = $("#pros-section").offset().top;
+            halfWindow = $(window).height() / 2;
+            halfSection = $("#pros-blurb").height();
+            off = top - halfWindow + halfSection;
             $("html, body").animate({
-                scrollTop: $("#pros-section").offset().top
+                scrollTop: off
             });
         }
         //$("#selection").css({ 'height': "auto" });
@@ -69,7 +78,7 @@ $(function() {
 // Parallax effect for background images
 $(function() {
     $('.parallax-me').each(function() {
-        $(this).parallax('50%', 0.3, true);
+        $(this).parallax('50%', 0.3, false);
     });
 });
 // Bio selection for careers page

@@ -328,7 +328,7 @@ header#nav nav#navigation ul a:focus::after {
     transform: translateY(0px);
 }
 header#nav.stuck {
-    background: #074575;
+    background: #042945;
     -webkit-transition: background .2s linear;
     -moz-transition: background .2s linear;
     -o-transition: background .2s linear;
@@ -423,7 +423,7 @@ header#header h1#brand {
     height: 100%;
     position: fixed;
     top: 0;
-    background: url(../video/preview.png) no-repeat;
+    background: url(../img/cp_ls.jpg) no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -499,7 +499,7 @@ header#header h1#brand {
     }
 }
 footer#footer {
-    background: #074575;
+    background: #042945;
     color: #fff;
     text-align: center
 }
@@ -849,7 +849,7 @@ footer#footer #start .icon-mail {
     background-size: cover;
 }
 #difference section#img-3 {
-    background: url(../img/drod.jpg) no-repeat center;
+    background: url(../img/davey_office.jpg) no-repeat center;
     height: 70%;
     width: 100%;
     position: relative;
@@ -1202,7 +1202,6 @@ footer#footer #start .icon-mail {
 #careers #grads-section,
 #careers #pros-section {
     height:100%; 
-    display:none; 
     position:inherit;
 }
 #careers #grads-section .blurb, 
@@ -1242,7 +1241,7 @@ footer#footer #start .icon-mail {
     /* find a way to horizontally align this */
 }
 #careers section#img-1 {
-    background: url(../img/block.jpg);
+    background: url(../img/dan_davey_casual.jpg);
     background-attachment: fixed; 
     height: 70%;
     width: 100%;
@@ -1253,7 +1252,29 @@ footer#footer #start .icon-mail {
     background-size: cover;
 }
 #careers section#img-2 {
-    background: url(../img/happy_dan.jpg);
+    background: url(../img/dan_joe_office.jpg);
+    background-attachment: fixed; 
+    height: 70%;
+    width: 100%;
+    position: relative;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+#careers section#img-3 {
+    background: url(../img/sequia.jpg);
+    background-attachment: fixed; 
+    height: 70%;
+    width: 100%;
+    position: relative;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+#careers section#img-4 {
+    background: url(../img/mouse.jpg);
     background-attachment: fixed; 
     height: 70%;
     width: 100%;
@@ -1584,7 +1605,7 @@ figure.effect-chico:hover p {
     -moz-transition: all 0.3s;
     transition: all 0.3s;
 }
-/* Border Swapping Effec */
+/* Border Swapping Effect */
 .border-swap {
     display: inline-block;
     position: relative;
@@ -1595,7 +1616,6 @@ figure.effect-chico:hover p {
     line-height: 55px;
     text-transform: uppercase;
 }
-
 .border-swap a::before,
 .border-swap a::after {
     position: absolute;
@@ -1609,7 +1629,6 @@ figure.effect-chico:hover p {
     transition: all 0.3s;
     pointer-events: none;
 }
-
 .border-swap a::before {
     top: 0;
     left: 0;
@@ -1620,7 +1639,6 @@ figure.effect-chico:hover p {
     -moz-transform-origin: 0 0;
     transform-origin: 0 0;
 }
-
 .border-swap a::after {
     right: 0;
     bottom: 0;
@@ -1631,7 +1649,6 @@ figure.effect-chico:hover p {
     -moz-transform-origin: 100% 0;
     transform-origin: 100% 0;
 }
-
 .border-swap a:hover::before,
 .border-swap a:hover::after,
 .border-swap a:focus::before,
@@ -1639,7 +1656,6 @@ figure.effect-chico:hover p {
     opacity: 1;
     width: 100px;
 }
-
 .border-swap a:hover::before,
 .border-swap a:focus::before {
     left: 50%;
@@ -1647,13 +1663,25 @@ figure.effect-chico:hover p {
     -moz-transform: rotate(0deg) translateX(-50%);
     transform: rotate(0deg) translateX(-50%);
 }
-
 .border-swap a:hover::after,
 .border-swap a:focus::after {
     right: 50%;
     -webkit-transform: rotate(0deg) translateX(50%);
     -moz-transform: rotate(0deg) translateX(50%);
     transform: rotate(0deg) translateX(50%);
+}
+/* Border Swapping Effect (homepage customizations) */
+#index .border-swap a {
+    font-weight: 300;
+    font-size: 42px;
+    padding: 0;
+}
+#index .border-swap a:hover {
+    color: #fff;
+}
+#index .border-swap a::before,
+#index .border-swap a::after {
+    width: 100px;
 }
 /* Cross Effect */
 .cross a {
