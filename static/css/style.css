@@ -1763,3 +1763,12 @@ div.arrow-holder {
     width: 70px;
     height: 35px;
 }
+
+.texture {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-image: url(../img/texture_dark.png);
+    background-repeat: round;
+    z-index: 100;
+}
