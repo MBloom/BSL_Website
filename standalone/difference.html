@@ -135,17 +135,5 @@
     <script>window.jQuery || document.write('<script src="../static/js/jquery.parallax.min.js">\x3C/script>')</script>
     <script src="../static/js/waypoints.min.js"></script>
     <script src="../static/js/script.js"></script>
-    <script type="text/javascript">
-    function scrollTo(target) {
-        var scrollSpeed = 700;
-        var top = $(target).offset().top;
-        var halfWindow = $(window).height() / 2;
-        var halfTarget = $(target).height() / 2;
-        // var navHeight = document.getElementById('nav').clientHeight;
-        // var footHeight = document.getElementById('footer').clientHeight;
-        var offset = top - halfWindow + halfTarget;
-        $('html, body').animate({scrollTop:offset}, scrollSpeed);
-    }
-    </script>
     </body>
 </html>

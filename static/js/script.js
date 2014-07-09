@@ -18,13 +18,21 @@ $(function() {
         $("#content").toggleClass("pushLeft");
     });
 });
+// scroll to section and center on screen
+function scrollTo(target) {
+    var scrollSpeed = 700;
+    var top = $(target).offset().top;
+    var halfWindow = $(window).height() / 2;
+    var halfTarget = $(target).height() / 2;
+    var offset = top - halfWindow + halfTarget;
+    $('html, body').animate({scrollTop:offset}, scrollSpeed);
+}
 /*
 Document vs. Window
 $( document ) is only available after the document has loaded
 $( window ) is available before the document loads/is ready
 */
 $(document).ready(function() {
-    var off, top, halfWindow, halfSection;
     $("#grads").click(function() {
         // simply switch content if other section is currrently active 
         if ($("#pros-section").is(':visible')) {
@@ -35,13 +43,7 @@ $(document).ready(function() {
         else $("#grads-section").slideToggle("slow");
         //move to top of the section
         if ($("#grads-section").is(':visible')) {
-            top = $("#grads-section").offset().top;
-            halfWindow = $(window).height() / 2;
-            halfSection = $("#grad-blurb").height();
-            off = top - halfWindow + halfSection;
-            $("html, body").animate({
-                scrollTop: off
-            });
+            scrollTo("#grad-blurb");
         }
         // $("#selection").css({ 'height': "auto" });
     });
@@ -56,13 +58,7 @@ $(document).ready(function() {
         else $("#pros-section").slideToggle("slow");
         //move to top of the section
         if ($("#pros-section").is(':visible')) {
-            top = $("#pros-section").offset().top;
-            halfWindow = $(window).height() / 2;
-            halfSection = $("#pros-blurb").height();
-            off = top - halfWindow + halfSection;
-            $("html, body").animate({
-                scrollTop: off
-            });
+            scrollTo("#pros-blurb");
         }
         //$("#selection").css({ 'height': "auto" });
     });
