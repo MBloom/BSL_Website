@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Difference | BluestoneLogic</title>
+        <title>Results We Deliver | BluestoneLogic</title>
         <!-- ****** faviconit.com favicons ****** -->
         <link rel="shortcut icon" href="../static/favicon/favicon.ico">
         <link rel="icon" sizes="16x16 32x32 64x64" href="../static/favicon/favicon.ico">
@@ -31,7 +31,7 @@
     <body id="difference">
         <nav id="slide-menu">
             <ul>
-                <li><a href="/difference.html">The Difference</a></li>
+                <li><a href="/difference.html">Results</a></li>
                 <li><a href="/people.html">Our People</a></li>
                 <li><a href="/careers.html">Careers</a></li>
                 <li><a href="/contact.html">Contact</a></li>
@@ -46,7 +46,7 @@
                     <!--<img class="bsl-words">-->
                     <ul>
                         <li class="show-for-small" id="showMenu"><i class="fa fa-bars"></i></li>
-                        <li><a href="/difference.html">The Difference</a></li>
+                        <li><a href="/difference.html">Results</a></li>
                         <li><a href="/people.html">Our People</a></li>
                         <li><a href="/careers.html">Careers</a></li>
                         <li><a href="/contact.html">Contact</a></li>
@@ -58,7 +58,7 @@
             <section id="what">
                 <div class="row">
                     <div class="large-10 large-offset-1 columns">
-                        <h2>The Difference</h2>
+                        <h2>Results We Deliver</h2>
                         <hr>
                         <p>Today, our customers are challenged to provide more services, better reliability, and flexible capability—within lower budgets. In the past, IT decision-makers decreased costs by cutting services, shelving projects, and espousing system maintenance. This approach sacrifices quality and is counterproductive to the objective of long-term cost savings. The resulting outdated systems hinder the ability to deploy needed applications and services; pose cyber security risks; and strain resources, people, and processes.<br><br>Conversely, our approach tackles these modernization challenges by integrating and replacing legacy systems with compatible new technologies to reduce overall costs.</p>
                     </div>
@@ -111,6 +111,9 @@
                     </div>
                 </div>
             </section>
+            <section id="img-4" class="parallax-me">
+                <div class="texture"></div>
+            </section>
             <footer id="footer">
                 <div class="row">
                     <div class="large-12 columns">
@@ -135,5 +138,16 @@
     <script>window.jQuery || document.write('<script src="../static/js/jquery.parallax.min.js">\x3C/script>')</script>
     <script src="../static/js/waypoints.min.js"></script>
     <script src="../static/js/script.js"></script>
+    <script>
+    function spaceMe() {
+        var offset = ($(window).height()/2)-($("#img-4").height()/2)+130;
+        $("#img-4").css('height', '' + offset);
+    }
+
+    $(document).ready(function() {
+        spaceMe();
+        $(window).bind('resize', spaceMe);
+    });
+    </script>
     </body>
 </html>
