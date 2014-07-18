@@ -400,7 +400,7 @@ header#header {
 header#header h1#brand {
     font-family: Lato;
     font-size: 48px;
-    font-weight: 500;
+    font-weight: 300;
     letter-spacing: -2px;
     line-height: 1.5;
     text-transform: lowercase;
@@ -408,6 +408,9 @@ header#header h1#brand {
     z-index: 1001;
     width: 420px;
     margin: 335px 0 30px 70px
+}
+header#header h1#brand span {
+    font-weight: 700;
 }
 @media (max-width: 1149px) {
     header#header h1#brand{
@@ -457,6 +460,7 @@ header#header h1#brand {
 }
 #index button#nav-arrow {
     border: none;
+    padding: 2px 0 3px 0;
     width: 100%;
     z-index: 30;
     background: transparent;
@@ -643,6 +647,11 @@ footer#footer #start .icon-mail {
         top: 350px
    }
 }
+#index section#what hr {
+    width: 85px;
+    margin: 30px auto 45px auto;
+    border-color: #074575;
+}
 #index section#what {
     background: #bbb url(../img/tank.jpg) no-repeat center;
     background-attachment: fixed;
@@ -658,7 +667,7 @@ footer#footer #start .icon-mail {
     font-size: 48px;
     font-weight: 300;
     text-align: center;
-    margin-bottom: 60px
+    color: #fff;
 }
 #index section#what p {
     font-size: 28px;
