@@ -1,5 +1,5 @@
 // collapse the navbar on scroll
-$(function() {
+$(document).ready(function() {
     if ($(window).width() <= 767) {
         $("#nav").addClass("stuck");
     }
@@ -12,7 +12,7 @@ $(function() {
     }
     else $("#nav").addClass("stuck");
 });
-$(function() {
+$(document).ready(function() {
     $("#showMenu").click(function() {
         $("#slide-menu").toggleClass("open");
         $("#content").toggleClass("pushLeft");
@@ -24,6 +24,7 @@ function scrollTo(target) {
     var top = $(target).offset().top;
     var halfWindow = $(window).height() / 2;
     var halfTarget = $(target).height() / 2;
+    var navBar = $("#nav").height();
     var offset = top - halfWindow + halfTarget;
     $('html, body').animate({scrollTop:offset}, scrollSpeed);
 }
@@ -65,14 +66,14 @@ $(document).ready(function() {
 });
 
 // Slideshow functionality
-$(function() {
+$(window).ready(function() {
     $('.slideshow img:gt(0)').hide();
     setInterval(function() {
         $('.slideshow :first-child').fadeOut().next('img').fadeIn().end().appendTo('.slideshow');
     }, 5000);
 });
 // Parallax effect for background images
-$(function() {
+$(document).ready(function() {
     $('.parallax-me').each(function() {
         $(this).parallax('50%', 0.3, false);
     });

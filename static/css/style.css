@@ -177,6 +177,9 @@ nav#slide-menu {
     text-align: right;
     background: #ccc;
     position: fixed;
+    -webkit-box-shadow: inset 4px 4px 15px rgba(0,0,0,.3);
+    -moz-box-shadow: inset 4px 4px 15px rgba(0,0,0,.3);
+    box-shadow: inset 4px 4px 15px rgba(0,0,0,.3);
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     transition: all 0.3s ease;
@@ -387,7 +390,7 @@ header#nav.stuck nav#navigation ul li.show-for-small{
 }
 header#header {
     background: transparent;
-    height: 820px;
+    height: 100%;
     position: fixed;
     width: 100%;
     top: 0;
@@ -451,6 +454,35 @@ header#header h1#brand {
     #index #video-container {
         height: 350px
    }
+}
+#index button#nav-arrow {
+    border: none;
+    width: 100%;
+    z-index: 30;
+    background: transparent;
+    color: white;
+    position: absolute;
+    top: -moz-calc(100% - 47px);
+    top: -webkit-calc(100% - 47px);
+    top: calc(100% - 47px);
+    -webkit-transition: background .2s linear;
+    -moz-transition: background .2s linear;
+    -o-transition: background .2s linear;
+    transition: background .2s linear;
+}
+#index button#nav-arrow i {
+    position: relative;
+    top: -20px;
+    -webkit-transition: top .2s linear;
+    -moz-transition: top .2s linear;
+    -o-transition: top .2s linear;
+    transition: top .2s linear
+}
+#index button#nav-arrow:hover {
+    background: #074575;
+}
+#index button#nav-arrow:hover i {
+    top: 0;
 }
 @-webkit-keyframes navin {
     0% {
@@ -742,8 +774,8 @@ footer#footer #start .icon-mail {
     background: #999 url(../img/happy_dan.jpg) no-repeat center;
     background-attachment: fixed;
     height: -moz-calc(100% - 155px);
-    height: -webkit-calc(100% - 100px);
-    height: calc(100% - 100px);
+    height: -webkit-calc(100% - 155px);
+    height: calc(100% - 155px);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -1353,11 +1385,18 @@ footer#footer #start .icon-mail {
 }
 #connect #map {
     width: 100%;
-    height: 70%;
     min-height: 400px; 
     position: relative;
+    height: -moz-calc(100% - 394px);
+    height: -webkit-calc(100% - 394px);
+    height: calc(100% - 394px);
 }
 @media (max-width: 1149px) {
+    #connect #map {
+        height: -moz-calc(100% - 364px);
+        height: -webkit-calc(100% - 364px);
+        height: calc(100% - 364px);
+    }
    #connect section#contact h2 {
        font-size: 32px;
   }
