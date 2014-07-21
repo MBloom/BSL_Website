@@ -453,11 +453,6 @@ header#header h1#brand span {
     top: 0;
     left: 0;
 }
-@media (max-width: 767px) {
-    #index #video-container {
-        height: 350px
-   }
-}
 #index button#nav-arrow {
     border: none;
     padding: 2px 0 3px 0;
@@ -583,11 +578,12 @@ footer#footer ul li a:hover, a:focus {
 }
 @media (max-width: 767px) {
     footer#footer ul {
-        margin: 20px 0
+        margin: 10px 0
    }
    footer#footer ul li {
        display: block;
-       margin: 5px 0
+       margin: 5px 0;
+       font-size: 10px;
   }
 }
 footer#footer #start {
@@ -642,11 +638,6 @@ footer#footer #start .icon-mail {
     top: 100%;
     z-index: 30;
 }
-@media (max-width: 767px) {
-    #index #content {
-        top: 350px
-   }
-}
 #index section#what hr {
     width: 85px;
     margin: 30px auto 45px auto;
@@ -682,12 +673,16 @@ footer#footer #start .icon-mail {
         background-image: none;
         height: auto
    }
+   #index section#what hr {
+        width: 55px;
+        margin: 15px auto 25px auto;
+    }
    #index section#what h2 {
-       font-size: 36px;
-       margin-bottom: 40px;
+       font-size: 24px;
+       margin-bottom: 0px;
   }
   #index section#what p {
-       font-size: 24px;
+       font-size: 16px;
        margin-bottom: 0
   }
 }
@@ -739,6 +734,10 @@ footer#footer #start .icon-mail {
     text-align: center;
     z-index: 1;
 }
+#index section#learn p {
+    margin: 0;
+    padding: 0 20px;
+}
 @media (max-width: 1149px) {
     #index section#learn {
         padding: 70px 0
@@ -758,25 +757,36 @@ footer#footer #start .icon-mail {
     }
 }
 @media (max-width: 768px) {
-    #index section#learn {
-        padding: 50px 0
-    }
     #index section#how {
-        padding: 60px 15px;
+        padding: 45px 0px;
     }
     #index section#how h2{
-        font-size: 36px;
+        font-size: 24px;
         margin-bottom: 20px
     }
-    #index section#learn h2 {
-        font-size: 32px
-    }
     #index section#how h3 {
-        font-size: 28px;
+        font-size: 18px;
         margin: 30px 0px 10px
     }
     #index section#how p {
-        font-size: 20px
+        font-size: 16px
+    }
+    #index section#learn {
+        padding: 20px 0px
+    }
+    #index section#learn p {
+        padding: 0 10px;
+    }
+    #index section#learn h2 {
+        font-size: 24px;
+    }
+    #index section#learn a {
+        font-size: 18px;
+        line-height: 40px;
+    }
+    #index section#learn a::before,
+    #index section#learn a::after {
+        width: 80px;
     }
 }
 #index section#who {
@@ -817,16 +827,19 @@ footer#footer #start .icon-mail {
     #index section#who {
         padding: 45px 0;
         background-image: none;
-        height: auto
+        height: auto;
    }
     #index section#who h2 {
         text-align: center;
-       font-size: 36px;
-       margin-bottom: 40px
+       font-size: 24px;
+       margin-bottom: 40px;
     }
     #index section#who p {
         text-align: center;
-       font-size: 24px
+       font-size: 16px;
+  }
+  #index section#who a {
+    font-size: 18px;
   }
 }
 .light {
@@ -974,26 +987,36 @@ footer#footer #start .icon-mail {
         background-image: none;
         background-color: #074575;
         height: auto
-   }
-   #difference section#what .row {
-        padding: 100px 0;
-   }
-   #difference section#what h2 {
+    }
+    #difference section#what .row {
+        padding: 100px 0 25px;
+    }
+    #difference section#what h2 {
         color: #fff;
-       font-size: 36px;
-       margin-bottom: 0px;
-  }
-  #difference section.blurb h2 {
-    font-size: 36px
-}
+        font-size: 24px;
+        margin-bottom: 0px;
+    }
     #difference section#what hr {
-    margin: 20px auto 35px auto;
-}
-  #difference section#what p {
+        width: 55px;
+        margin: 10px auto 18px auto;
+    }
+    #difference section#what p {
         color: #fff;
-       font-size: 20px;
-       margin-bottom: 0
-  }
+        font-size: 16px;
+        margin-bottom: 0
+    }
+    #difference section.blurb h2 {
+        font-size: 24px
+    }
+    #difference section.blurb h3 {
+        font-size: 18px
+    }
+    #difference section.blurb p {
+        font-size: 16px
+    }
+    #difference section.blurb .row {
+        padding: 45px 0;
+    }
 }
 #people #content {
     top: 0
@@ -1048,6 +1071,9 @@ footer#footer #start .icon-mail {
     color: #dedede;
     cursor: pointer;
 }
+#people section#our-people .cycle-pager span:last-child {
+    margin-right: 0;
+}
 #people section#our-people .cycle-pager span.cycle-pager-active {
     color: #074575
 }
@@ -1069,22 +1095,23 @@ footer#footer #start .icon-mail {
 }
 @media (max-width: 767px) {
     #people section#our-people {
-        padding: 100px 0;
+        padding: 100px 0 50px;
         background-image: none;
         background-color: #074575;
         height: auto
    }
    #people section#our-people h2 {
         color: #fff;
-       font-size: 36px;
+       font-size: 24px;
        margin-bottom: 0px;
     }
     #people section#our-people hr {
-        margin: 20px auto 35px auto;
+        width: 55px;
+        margin: 10px auto 18px auto;
     }
     #people section#our-people p {
         color: #fff;
-        font-size: 20px;
+        font-size: 16px;
         margin-bottom: 20px
     }
     #people section#our-people .cycle-pager span.cycle-pager-active {
@@ -1114,27 +1141,34 @@ footer#footer #start .icon-mail {
     font-weight: 300;
     text-align: center;
 }
-@media (max-width: 1149px) {
-    #people section#our-people {
-        padding: 180px 0;
-   }
-   #people section#our-people h2 {
-       font-size: 38px;
-       margin-bottom: 0px;
-  }
-}
 @media (max-width: 767px) {
-    #people section#our-people {
-        padding: 45px 0;
-        background-image: none;
-        background-color: #074575;
-        height: auto
-   }
-   #people section#our-people h2 {
-        color: #fff;
-       font-size: 36px;
-       margin-bottom: 0px;
-  }
+    #people section#team {
+        padding: 45px 0 15px;
+    }
+    #people section#team h2 {
+        font-size: 24px;
+        margin: 0;
+    }
+    #people section#team hr {
+        width: 55px;
+        margin: 10px auto 18px auto;
+    }
+    #people section#team p {
+        font-size: 14px;
+        font-weight: 300;
+        width: 250px;
+        margin: 0 auto;
+        text-align: justify;
+        padding-bottom: 30px;
+    }
+    #people section#team figure {
+        height: 250px;
+        width: 250px;
+        margin-bottom: 10px;
+    }
+    #people section#team figure h4 {
+        font-size: 20px;
+    }
 }
 #careers #selection {
     height: 100%;
@@ -1366,7 +1400,7 @@ footer#footer #start .icon-mail {
 #connect section#contact {
     height: auto;
     text-align: center;
-    color: 074575;
+    color: #074575;
     background: #73acd9;
     padding-top: 120px
 }
@@ -1414,12 +1448,16 @@ footer#footer #start .icon-mail {
   }
 }
 @media (max-width: 767px) {
+    #connect section#contact {
+        padding: 100px 0 0;
+    }
    #connect section#contact h2 {
-       font-size: 32px;
+       font-size: 24px;
+       margin-bottom: 10px;
        width: 100%;
   }
   #connect section#contact p {
-       font-size: 18px;
+       font-size: 16px;
   }
 }
 .brand-heading {

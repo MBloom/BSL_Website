@@ -95,7 +95,7 @@ function init() {
     var myLoc = new google.maps.LatLng(38.9394730, -77.1787780)
     var myOptions = {
         zoom: 12,
-        center: new google.maps.LatLng(38.9185625, -77.0995465),
+        center: myLoc,
         mapTypeId: google.maps.MapTypeId.ROADMAP,
         mapTypeControl: false,
         scrollwheel: false,
