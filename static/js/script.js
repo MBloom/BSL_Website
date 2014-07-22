@@ -25,7 +25,7 @@ function scrollTo(target) {
     var halfWindow = $(window).height() / 2;
     var halfTarget = $(target).height() / 2;
     var navBar = $("#nav").height();
-    var offset = top - halfWindow + halfTarget;
+    var offset = top - halfWindow + halfTarget - 75;
     $('html, body').animate({scrollTop:offset}, scrollSpeed);
 }
 /*
@@ -75,7 +75,9 @@ $(window).ready(function() {
 // Parallax effect for background images
 $(document).ready(function() {
     $('.parallax-me').each(function() {
-        $(this).parallax('50%', 0.3, false);
+        if ($(window).width() > 767) {
+            $(this).parallax('50%', 0.2, false);
+        }
     });
 });
 // Bio selection for careers page

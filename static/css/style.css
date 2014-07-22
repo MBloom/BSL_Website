@@ -438,11 +438,11 @@ header#header h1#brand span {
     height: 100%;
     position: fixed;
     top: 0;
-    background: url(../img/server.png) no-repeat center;
+/*    background: url(../img/server.png) no-repeat center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
+    background-size: cover;*/
 }
 #index #video-container video{
     min-width: 100%;
@@ -935,6 +935,14 @@ footer#footer #start .icon-mail {
     -o-background-size: cover;
     background-size: cover;
 }
+@media (max-width: 767px) {
+    #difference section#img-1, 
+    #difference section#img-2, 
+    #difference section#img-3, 
+    #difference section#img-4 {
+        background-attachment: scroll;
+    }
+} 
 #difference section.blurb {
     height: auto;
     width: 100%;
@@ -1237,33 +1245,6 @@ footer#footer #start .icon-mail {
 #careers .btn-opt:hover i.fa{
     color: #73acd9;
 }
-/*#careers .btn-opt:after {
-    display: block;
-    position:absolute;
-    top:0;
-    left: 0;
-    right:0;
-    bottom: 0;
-    margin:auto;
-    font-size: 80px;
-    color: #074575;
-    font-family: "FontAwesome";
-    font-weight: normal;
-    font-style: normal;
-    content: ' ';
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
-}
-#careers .btn-grad:after {
-    content: "\f19d";
-}
-#careers .btn-pro:after {
-    content: "\f0b1";
-}
-#careers .btn-opt:hover:after{
-    color: transparent;
-}*/
 #careers .btn-opt:hover,
 #careers .btn-opt:active {
     font-weight: 400;
@@ -1289,20 +1270,34 @@ footer#footer #start .icon-mail {
     opacity: 1;
 }
 @media (max-width: 767px) {
-   #careers #selection section#overview h2 {
-       font-size: 36px;
-       margin-bottom: 0px
-  }
-  #careers #selection section#overview h3 {
-       font-size: 26px;
-       margin-bottom: 15px;
-  }
-  #careers #selection section#overview hr {
-    margin: 20px auto 35px auto;
-}
- #careers #selection section#overview  p {
-       font-size: 20px;
-  }
+    #careers #selection {
+        padding: 100px 0;
+    }
+    #careers #selection section#overview h2 {
+        font-size: 24px;
+        margin-bottom: 0px
+    }
+    #careers #selection section#overview h3 {
+        font-size: 26px;
+        margin-bottom: 15px;
+    }
+    #careers #selection section#overview hr {
+        margin: 10px auto 18px auto;
+    }
+    #careers #selection section#overview  p {
+       font-size: 16px;
+    }
+    #careers #selection section#overview #buttons {
+        margin-top: 20px;
+    }
+    #careers #selection section#overview button {
+        margin: 0;
+        width: 64%;
+        font-size: 20px;
+    }
+    #careers #selection section#overview i {
+        color: #074575;
+    }
 }
 #careers #grads-section,
 #careers #pros-section {
@@ -1389,10 +1384,37 @@ footer#footer #start .icon-mail {
     position: relative;
     padding: 50px 0;
 }
-#careers section#apply  a {
+#careers section#apply a {
     color: #fff;
     font-weight: 300;
     font-size: 38px;
+}
+@media (max-width: 767px) {
+    #careers #grads-section .blurb > .row,
+    #careers #pros-section .blurb > .row {
+        padding: 65px 0;
+    }
+    #careers #grads-section .blurb h2,
+    #careers #pros-section .blurb h2 {
+        font-size: 24px;
+    }
+    #careers #grads-section .blurb p,
+    #careers #pros-section .blurb p {
+        font-size: 16px;
+    }
+    #careers #grads-section .blurb a,
+    #careers #pros-section .blurb a {
+        font-size: 18px;
+    }
+    #careers .underline {
+        width: 166px;
+    }
+    #careers section#apply {
+        padding: 20px 0;
+    }
+    #careers section#apply a {
+        font-size: 18px;
+    }
 }
 #connect #content {
     top: 0
@@ -1641,7 +1663,8 @@ figure.effect-chico:hover p {
     width: 100%;
 }
 #careers .underline {
-    position: absolute;
+    position: relative;
+    width: 185px;
     margin-top: 10px;
 }
 #careers .underline a {
