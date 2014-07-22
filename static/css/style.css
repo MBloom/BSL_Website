@@ -197,7 +197,7 @@ nav#slide-menu ul {
     transition: all 300ms;
 }
 nav#slide-menu li {
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 300;
     padding: 6px 0;
     cursor: pointer;
@@ -865,7 +865,7 @@ footer#footer #start .icon-mail {
 #difference section#what {
     height: auto;
     color: #074575;
-    background: url(../img/whiteboard.jpg) no-repeat center;
+    background: url(../img/whiteboard.png) no-repeat center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
